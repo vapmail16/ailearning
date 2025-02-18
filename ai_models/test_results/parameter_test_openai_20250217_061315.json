@@ -1,0 +1,111 @@
+{
+  "model": "openai",
+  "prompt": "tell me a joke",
+  "timestamp": "20250217_061315",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.9054610729217529,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.5618181228637695,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.5429461002349854,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.7344799041748047,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.7928557395935059,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.6254148483276367,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.48132801055908203,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.6730811595916748,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    }
+  ]
+}

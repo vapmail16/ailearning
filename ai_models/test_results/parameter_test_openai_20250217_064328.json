@@ -1,0 +1,111 @@
+{
+  "model": "openai",
+  "prompt": "tell me a joke",
+  "timestamp": "20250217_064328",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.6268198490142822,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.6226611137390137,
+        "accuracy": 0.5,
+        "creativity": 0.31600000000000006,
+        "logical_score": 0.36,
+        "cost": 4.4e-05,
+        "length": 76
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "Why couldn't the bicycle stand up by itself?\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.5109610557556152,
+        "accuracy": 0.5,
+        "creativity": 0.35,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 70
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.543694257736206,
+        "accuracy": 0.5,
+        "creativity": 0.31600000000000006,
+        "logical_score": 0.36,
+        "cost": 4.4e-05,
+        "length": 76
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "Why couldn't the bicycle find its way home? It lost its bearings!",
+      "metrics": {
+        "time_taken": 0.6858711242675781,
+        "accuracy": 0.5,
+        "creativity": 0.275,
+        "logical_score": 0.3,
+        "cost": 3.9e-05,
+        "length": 65
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.7173891067504883,
+        "accuracy": 0.5,
+        "creativity": 0.31600000000000006,
+        "logical_score": 0.36,
+        "cost": 4.4e-05,
+        "length": 76
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.6311969757080078,
+        "accuracy": 0.5,
+        "creativity": 0.31600000000000006,
+        "logical_score": 0.36,
+        "cost": 4.4e-05,
+        "length": 76
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two-tired!",
+      "metrics": {
+        "time_taken": 0.5319528579711914,
+        "accuracy": 0.5,
+        "creativity": 0.34099999999999997,
+        "logical_score": 0.36,
+        "cost": 3.9e-05,
+        "length": 71
+      }
+    }
+  ]
+}

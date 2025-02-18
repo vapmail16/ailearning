@@ -1,0 +1,111 @@
+{
+  "model": "together",
+  "prompt": "tell me a joke",
+  "timestamp": "20250217_054930",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": ". #10\nUser 1: What do you call a man with no arms and no legs in the water? Bob\nUser 2: I'm not sure if I should be laughing or crying...\nUser 1: You should be laughing, it is just a joke!\nUser 2: Yeah but it's like \"haha... poor guy... he can only bob in water... haha... poor guy...\"\nUser 1: It is just a joke man, don't think about it too much. It is like when people say \"I am so fat\" and then they laugh. It is just a way to make people laugh.",
+      "metrics": {
+        "time_taken": 1.5205869674682617,
+        "accuracy": 0.5,
+        "creativity": 1.0,
+        "logical_score": 0.42,
+        "cost": 9.3e-05,
+        "length": 448
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": " about my shoes?\n\nWhy are your shoes so expensive? Because they're designer.\nUser 1: Why did the shoe go to therapy? It had attachment issues.",
+      "metrics": {
+        "time_taken": 0.8015012741088867,
+        "accuracy": 0.5,
+        "creativity": 0.582,
+        "logical_score": 0.36,
+        "cost": 2.6e-05,
+        "length": 142
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": " about my mom.\u201d\n4. \u201cLet\u2019s go to the mall!\u201d\n5. \u201cDo you want to hang out this afternoon?\u201d\n6. \u201cI made us dinner reservations at that new place downtown.\u201d\n7. \u201cYou look really nice today.\u201d\n8. \u201cCan I meet your parents?\u201d\n9. \u201cLet\u2019s plan a weekend getaway together.\u201d\n10. \u201cWhat do you think about us moving in together?\u201d",
+      "metrics": {
+        "time_taken": 1.213433027267456,
+        "accuracy": 0.5,
+        "creativity": 0.85,
+        "logical_score": 0.3,
+        "cost": 5.6e-05,
+        "length": 310
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": ",\" said Dumbledore,\n\n\"What do you call a blind wizard?\" he asked. \"A sorceress.\"\n\nRon nearly doubled up with laughter. Harry grinned as well, but Dumbledore's smile had faded slightly and was tinged with sadness again.\n```\nUser 21: >But then Ginny would be dating someone who was raised by the same man she suspects of murdering her mother. And for all we know Albus might have ordered James and Lily's murder as per the prophecy.. so Ron might literally be dating Ginny Weasley while also being suspect number 2 in those murders..\n\nIsn't that the most Harry Potter thing to happen?\nUser 69: Well I am not sure if it would be a good idea since Albus was never openly hostile to James in canon, and his actions surrounding James\u2019 death were more out of frustration at James taking away all of Lily\u2019s love that could\u2019ve been given to Snape than actual spite towards him. But at the end of the day if this new fic is anything like fanfiction dot net stories from my adolescence then they will absolutely make Albus James killer #2 behind Voldemort and we will all just collectively forget Canon Snape ever existed cause we love shipping so much. So yes totally the most Harry Potter thing to happen, you are absolutely correct haha.\nUser 68: >But at the end of the day if this new fic is anything like fanfiction dot net stories from my adolescence then they will absolutely make Albus James killer #2 behind Voldemort and we will all just collectively forget Canon Snape ever existed cause we love shipping so much. So yes totally the most Harry Potter thing to happen, you are absolutely correct haha\n\nOh no, what could possibly go wrong?! /s\nUser 43: You can already see it coming; Hermione doesn't care about Lily or any other muggleborn because Ginny does. Gendered logic! Woo!",
+      "metrics": {
+        "time_taken": 3.967952251434326,
+        "accuracy": 0.5,
+        "creativity": 1.0,
+        "logical_score": 0.48,
+        "cost": 0.000292,
+        "length": 1779
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": " when I was down?\u201d\n10. \u201cOh, wait, we got another one: \u2018How do you cheer up an addict?\u2019 A. Go and watch Narcos together!\u201d\n11. \u201cI just came here to give you this box of chocolate, hope they will cheer your day up.\u201d\n12. \u201cHow to cheer myself at work on Monday morning? It\u2019s easy enough \u2013 by listening to 90s music, the best time in my life",
+      "metrics": {
+        "time_taken": 1.2643911838531494,
+        "accuracy": 0.5,
+        "creativity": 0.9500000000000001,
+        "logical_score": 0.36,
+        "cost": 6.6e-05,
+        "length": 335
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": ", #27.\nUser 1: Have you heard what happened to the chameleon that couldn't change color? It had a reptile, dysfunction and was caught stealing hubcaps.\nUser 0: Holy shit! I hope that gets an upvote soon... That was fucking gold hahaha thanks for not letting down again!",
+      "metrics": {
+        "time_taken": 0.9607243537902832,
+        "accuracy": 0.5,
+        "creativity": 0.869,
+        "logical_score": 0.3,
+        "cost": 4.7e-05,
+        "length": 269
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": " about an octopus. A man was caught stealing in a store, but the shopkeeper couldn't press charges because he didn't want to say he saw eight of them! I can't believe you told me that joke again... Oh hey, do you mind if i play in your pool? **Players**: No no, go ahead! We were just playing anyway :) **Me**: Alright, cool :).  (I proceed to take my shirt of and enjoy their pool)\n\n* 10 minutes later\n\n**Me**: *still in pool* So who are all of you guys? **Players**: Hey! We're from Seattle visiting our parents for the weekend. **Me**: Ahh ok cool, what do y'all play? (hoping they say overwatch) **players**: Overwatch mostly when we have time. We don't play ranked anymore though. What about you? **Me**: Ohhhhh nice nice. That sounds super fun :) . You guys should check out this awesome overwatch community on here called u/competitiveoverwatch haha. How old are all of you guys? **players**: We are mostly around 13-14...ish?? and then my sister over there is 18 and on vacation with us too... Why? And what's that subreddit called again? **Me**: Hmmm interesting. Umm no just curious hehe ;)  Anyway thats where i live over there, u/competitiveoverwatch hahaha! It's like a gaming family on reddit where people post about news/advice on overwatch, tips, cool plays like yours, team looking for players stuff, and people even schedule pickup games on discord! Its super cool!! There even was like two or three players this season who made it into overwatch league from that community ^_^ \n\n*I said it with so much enthusiasm and joy and was hoping maybe they could catch up on time and play with others through discord (and also to make other players aware of that community as well)*\n\n**Players**: Wow that sound amazingggg!!! Is there a discord link or anything like that?! If so please share!!!\n\nWell ladies n gentleman,  as the title suggest they went home today at 6pm. BUT they ended up adding me and we had a quick chat party through discord after that :) :) Its been about an hour now and although they haven't responded after I told them good night.... But still man, im glad as hell that they added me.  Also,  they made like 2 replies each on my thread which gave me more reddit-karma than any of my other posts in last year. Now I know how you guys feel when people keep upvoting stuff :) I also found another kid from NY that added me through that post from a completely different state... Well.... Now i think i should probably go sleep now because Im really exhausted.  My throat hurts and its past 11pm.  Thanks a lot guys <3. Forgive any grammar errors....   Peace out!!! :)\nUser 8: Great job OP, congrats of befriending some new peeps. Now remember what your role as a GM does for this group going forward. Don't be afraid to drop the reins sometimes when people want to follow a bad idea, don't be afraid to give them advice when needed, keep things positive, etc. If any bad situation happens or your group needs help just message these fine folks over at SJG: /r/stunfisk/ wiki/resources/gmaffairs and request assistance from one of the mods tagged on the sidebar under \"GM Affairs\" and use the word SOS or HELP and one of us will get back to ya right away regardless of timezone conflicts. Good night OP!\n\nEdit: Spelling error fixes due to autocorrect",
+      "metrics": {
+        "time_taken": 7.212651968002319,
+        "accuracy": 0.5,
+        "creativity": 1.0,
+        "logical_score": 0.48,
+        "cost": 0.000535,
+        "length": 3281
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": ".\u201d Hmm, using this in conversation might get you some weird looks and be kind of embarrassing. Try these two new ways instead:\n\n- \u201cOh dear, I think my feet are asleep\u2026 or perhaps they forgot to wake up. Can I trouble you for something that would tickle my funny bone instead?\u201d\n- \u201cSadly, my humor chip is malfunctioning today! Could you kindly insert your best knock-knock one-liner into the conversational computer so we may continue?\u201d Remember to have fun with these lines, and don\u2019t take yourself too seriously! \ud83d\ude09",
+      "metrics": {
+        "time_taken": 1.5360603332519531,
+        "accuracy": 0.5,
+        "creativity": 0.9500000000000001,
+        "logical_score": 0.3,
+        "cost": 8.6e-05,
+        "length": 515
+      }
+    }
+  ]
+}

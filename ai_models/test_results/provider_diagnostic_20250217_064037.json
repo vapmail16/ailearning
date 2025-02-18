@@ -1,0 +1,164 @@
+{
+  "tier_1": {
+    "openai": {
+      "status": "success",
+      "model": "gpt-4",
+      "response": "Why don't programmers like nature?\n\nIt has too many bugs.",
+      "metrics": {
+        "time_taken": 1.3954119682312012,
+        "accuracy": 0.5,
+        "creativity": 0.307,
+        "logical_score": 0.3,
+        "cost": 4e-05,
+        "length": 57
+      }
+    },
+    "anthropic": {
+      "status": "success",
+      "model": "claude-3-opus-20240229",
+      "response": "Sure, here's a short programming joke for you:\n\nWhy did the programmer quit his job?\nBecause he didn",
+      "metrics": {
+        "time_taken": 1.6601181030273438,
+        "accuracy": 0.5,
+        "creativity": 0.5640000000000001,
+        "logical_score": 0.36,
+        "cost": 0.002086,
+        "length": 114
+      }
+    },
+    "together": {
+      "status": "success",
+      "model": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+      "response": " Question: I'm thinking of buying a monkey for my programming assistant, what should I name him? Ans",
+      "metrics": {
+        "time_taken": 4.691225051879883,
+        "accuracy": 0.5,
+        "creativity": 1.0,
+        "logical_score": 0.5,
+        "cost": 0.000253,
+        "length": 1633
+      }
+    },
+    "gemini": {
+      "status": "success",
+      "model": "gemini-ultra",
+      "response": "Why did the programmer quit his job?\n\nBecause he didn't get arrays.",
+      "metrics": {
+        "time_taken": 0.8936460018157959,
+        "accuracy": 0.5,
+        "creativity": 0.337,
+        "logical_score": 0.36,
+        "cost": 4e-05,
+        "length": 67
+      }
+    }
+  },
+  "tier_2": {
+    "openai": {
+      "status": "success",
+      "model": "gpt-3.5-turbo",
+      "response": "Why do programmers prefer dark mode? \n\nBecause the light attracts bugs!",
+      "metrics": {
+        "time_taken": 0.6313588619232178,
+        "accuracy": 0.5,
+        "creativity": 0.33099999999999996,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    "anthropic": {
+      "status": "error",
+      "model": "claude-3-sonnet-20240229",
+      "response": "Error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: c",
+      "metrics": {
+        "time_taken": 0.15601420402526855,
+        "accuracy": 0,
+        "creativity": 0,
+        "logical_score": 0,
+        "cost": 0,
+        "length": 0
+      }
+    },
+    "together": {
+      "status": "success",
+      "model": "togethercomputer/llama-2-70b-chat",
+      "response": " #programmingjokes\n:)\nUser 1: I'm not really into jokes, but here's one: \n\nWhy do Java developers we",
+      "metrics": {
+        "time_taken": 0.9511590003967285,
+        "accuracy": 0.5,
+        "creativity": 0.5529999999999999,
+        "logical_score": 0.36,
+        "cost": 2.6e-05,
+        "length": 133
+      }
+    },
+    "gemini": {
+      "status": "success",
+      "model": "gemini-pro",
+      "response": "Why did the programmer get lost?\n\nBecause they didn't know where to return!",
+      "metrics": {
+        "time_taken": 0.9528229236602783,
+        "accuracy": 0.5,
+        "creativity": 0.355,
+        "logical_score": 0.36,
+        "cost": 4.3e-05,
+        "length": 75
+      }
+    }
+  },
+  "tier_3": {
+    "openai": {
+      "status": "error",
+      "model": "gpt-3.5-turbo-instruct",
+      "response": "Error: Error code: 404 - {'error': {'message': 'This is not a chat model and thus not supported in t",
+      "metrics": {
+        "time_taken": 0.22440409660339355,
+        "accuracy": 0,
+        "creativity": 0,
+        "logical_score": 0,
+        "cost": 0,
+        "length": 0
+      }
+    },
+    "anthropic": {
+      "status": "error",
+      "model": "claude-3-haiku-20240229",
+      "response": "Error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: c",
+      "metrics": {
+        "time_taken": 0.12061905860900879,
+        "accuracy": 0,
+        "creativity": 0,
+        "logical_score": 0,
+        "cost": 0,
+        "length": 0
+      }
+    },
+    "together": {
+      "status": "success",
+      "model": "togethercomputer/CodeLlama-34b-Python",
+      "response": " Question: Why do Java developers wear glasses? Answer: Because they don't C#!\nUser 1: That was good",
+      "metrics": {
+        "time_taken": 1.4583442211151123,
+        "accuracy": 0.5,
+        "creativity": 0.873,
+        "logical_score": 0.42,
+        "cost": 5.1e-05,
+        "length": 273
+      }
+    },
+    "gemini": {
+      "status": "success",
+      "model": "gemini-nano",
+      "response": "Why did the programmer get lost in the forest?\nBecause he didn't know which way to branch.",
+      "metrics": {
+        "time_taken": 0.7759287357330322,
+        "accuracy": 0.5,
+        "creativity": 0.39999999999999997,
+        "logical_score": 0.36,
+        "cost": 5.3e-05,
+        "length": 90
+      }
+    }
+  }
+}

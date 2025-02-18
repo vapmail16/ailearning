@@ -1,0 +1,12 @@
+{
+  "model": "gemini",
+  "prompt_type": "logical",
+  "prompt": "Solve this logic puzzle: A farmer needs to cross a river with a fox, a chicken, and a bag of corn...",
+  "response": "The classic farmer, fox, chicken, and corn riddle! Here's the solution:\n\n1. **Trip 1:** The farmer takes the chicken across the river, leaving the fox and corn behind.\n2. **Trip 2:** The farmer returns alone.\n3. **Trip 3:** The farmer takes the fox across the river.\n4. **Trip 4:** The farmer brings the chicken back to the original side (because the fox and chicken can't be left alone).\n5. **Trip 5:** The farmer takes the corn across the river.\n6. **Trip 6:** The farmer returns alone.\n7. **Trip 7:** The farmer takes the chicken across the river.\n\nNow everything is safely on the other side!\n",
+  "time_taken": 3.387479066848755,
+  "scores": {
+    "logical_reasoning": 1.0,
+    "response_time_score": 1.0,
+    "response_length": 1.0
+  }
+}

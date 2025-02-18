@@ -1,0 +1,8 @@
+{
+  "model": "together",
+  "prompt_type": "logical",
+  "prompt": "What is the next number in the sequence: 2, 6, 12, 20? Follow a quadratic pattern.",
+  "response": " The next number in the sequence is 30. The formula for the nth term of the sequence is: an = n^2 + n. To find the next number in the sequence, plug in n = 5 into the formula: a5 = 5^2 + 5 = 25 + 5 = 30. Therefore, the next number in the sequence is 30.\nThe best answer is 30.",
+  "time_taken": 1.219637155532837,
+  "scores": {}
+}

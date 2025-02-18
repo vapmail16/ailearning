@@ -1,0 +1,11 @@
+{
+  "model": "gemini",
+  "prompt_type": "response_time",
+  "prompt": "Hello, how are you?",
+  "response": "I am doing well, thank you for asking! How are you today?\n",
+  "time_taken": 0.7520129680633545,
+  "scores": {
+    "response_time_score": 1.0,
+    "response_length": 0.29
+  }
+}

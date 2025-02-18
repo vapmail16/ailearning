@@ -1,0 +1,12 @@
+{
+  "model": "openai",
+  "prompt_type": "factual",
+  "prompt": "Who wrote 'Romeo and Juliet'?",
+  "response": "William Shakespeare wrote 'Romeo and Juliet'.",
+  "time_taken": 0.6288161277770996,
+  "scores": {
+    "factual_accuracy": 1.0,
+    "response_length": 0.225,
+    "response_time_score": 1.0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "model": "anthropic",
+  "prompt_type": "factual",
+  "prompt": "Who wrote 'Romeo and Juliet'?",
+  "response": "William Shakespeare wrote \"Romeo and Juliet.\" It was written between 1591 and 1595, and first published in 1597. It's one of Shakespeare's most famous tragic plays and tells the story of two young lovers from feuding families in Verona, Italy.",
+  "time_taken": 2.118859052658081,
+  "scores": {
+    "factual_accuracy": 1.0,
+    "response_length": 1.0,
+    "response_time_score": 1.0
+  }
+}

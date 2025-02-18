@@ -1,0 +1,12 @@
+{
+  "model": "anthropic",
+  "prompt_type": "factual",
+  "prompt": "What is the capital of France?",
+  "response": "The capital of France is Paris.",
+  "time_taken": 0.5489730834960938,
+  "scores": {
+    "factual_accuracy": 1.0,
+    "response_length": 0.155,
+    "response_time_score": 1.0
+  }
+}

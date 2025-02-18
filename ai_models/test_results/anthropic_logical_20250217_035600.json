@@ -1,0 +1,7 @@
+{
+  "model": "anthropic",
+  "prompt_type": "logical",
+  "prompt": "What is the next number in the sequence: 2, 6, 12, 20? Follow a quadratic pattern.",
+  "response": "Let me solve this step by step.\n\n1) Since we're looking for a quadratic pattern, the sequence should fit a quadratic formula in the form an\u00b2 + bn + c, where n is the position in the sequence (1, 2, 3, 4,...).\n\n2) Let's look at the sequence:\n   n = 1 \u2192 2\n   n = 2 \u2192 6\n   n = 3 \u2192 12\n   n = 4 \u2192 20\n\n3) Let's look at the first differences:\n   6 - 2 = 4\n   12 - 6 = 6\n   20 - 12 = 8\n\n4) Looking at the second differences:\n   6 - 4 = 2\n   8 - 6 = 2\n\n5) Since the second differences are constant (2), this confirms we have a quadratic sequence.\n\n6) The formula would be: an\u00b2 + bn + c where a = 1, b = 1, c = 0\n   So, f(n) = n\u00b2 + n\n\n7) To find the next number, we put n = 5 into the formula:\n   5\u00b2 + 5 = 25 + 5 = 30\n\nTherefore, the next number in the sequence is 30.\n\nTo verify:\nf(1) = 1\u00b2 + 1 = 2\nf(2) = 2\u00b2 + 2 = 6\nf(3) = 3\u00b2 + 3 = 12\nf(4) = 4\u00b2 + 4 = 20\nf(5) = 5\u00b2 + 5 = 30\n\nThe answer is 30.",
+  "time_taken": 8.565619230270386
+}

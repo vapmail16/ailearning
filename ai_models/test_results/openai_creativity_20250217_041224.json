@@ -1,0 +1,12 @@
+{
+  "model": "openai",
+  "prompt_type": "creativity",
+  "prompt": "Write a short story about a time-traveling coffee cup",
+  "response": "Once upon a time, there was a magical coffee cup that had the power to travel through time. It belonged to a young barista named Lily, who discovered its special ability one morning when she accidentally spilled coffee on it.\n\nAs soon as the coffee touched the cup, it began to glow and shimmer, and before Lily knew it, she found herself whirling through time and space. The cup took her on a wild adventure, zipping past different eras and historical events.\n\nOne moment, Lily found herself in ancient Egypt, sipping coffee with Pharaohs and marveling at the majestic pyramids. The next, she was in medieval Europe, brewing coffee for knights and ladies in a bustling castle.\n\nBut it wasn't all fun and games. The coffee cup also brought Lily to darker moments in history, such as witnessing the devastation of World War II and the horrors of the Salem witch trials. Despite the danger and heartache she encountered, Lily remained determined to use her time-traveling cup for good.\n\nShe began to visit other time periods, using the power of her magical coffee cup to spread kindness and help those in need. From helping Leonardo da Vinci with his paintings to comforting a lonely child during the Great Depression, Lily used her newfound ability to make a difference in the world.\n\nAnd as she continued her time-traveling adventures, Lily realized that the true magic of the coffee cup was not just in its ability to traverse time, but in the connections and relationships she forged along the way. With each journey, she learned valuable lessons about compassion, resilience, and the power of a simple cup of coffee to bring people together across time and space.",
+  "time_taken": 3.2690768241882324,
+  "scores": {
+    "creativity": 0.8747368421052631,
+    "response_time_score": 1.0,
+    "response_length": 1.0
+  }
+}

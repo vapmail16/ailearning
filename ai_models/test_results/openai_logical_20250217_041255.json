@@ -1,0 +1,12 @@
+{
+  "model": "openai",
+  "prompt_type": "logical",
+  "prompt": "Solve this logic puzzle: A farmer needs to cross a river with a fox, a chicken, and a bag of corn...",
+  "response": "The farmer can only take one item with him in the boat at a time, leaving the other items on one side of the river. If he leaves the fox alone with the chicken, the fox will eat the chicken. If he leaves the chicken alone with the corn, the chicken will eat the corn. \n\nTo successfully cross the river with all items intact, the farmer must follow these steps:\n\n1. Take the chicken across the river and leave it on the other side.\n2. Go back and take the fox across the river.\n3. Leave the fox on the other side and take the chicken back with him.\n4. Leave the chicken on the original side and take the bag of corn across the river.\n5. Finally, go back and get the chicken to bring it to the other side.\n\nThis way, the farmer successfully crosses the river with all items intact.",
+  "time_taken": 1.6612119674682617,
+  "scores": {
+    "logical_reasoning": 1.0,
+    "response_time_score": 1.0,
+    "response_length": 1.0
+  }
+}

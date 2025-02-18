@@ -1,0 +1,7 @@
+{
+  "model": "anthropic",
+  "prompt_type": "logical",
+  "prompt": "Solve this logic puzzle: A farmer needs to cross a river with a fox, a chicken, and a bag of corn. The boat can only carry the farmer and one item. The fox can't be left with the chicken, and the chicken can't be left with the corn. Explain each step of how the farmer can get everything across safely.",
+  "response": "Let me solve this step by step. Let's start with everyone on the first bank.\n\n1. First trip:\n* Farmer takes chicken across\n* Leaves fox and corn on original bank (they're safe together)\n* Farmer leaves chicken on far bank\n* Farmer returns alone\n\n2. Second trip:\n* Farmer takes fox across\n* Farmer leaves fox on far bank\n* Farmer brings chicken back to original bank\n* (Fox and chicken are not left alone together)\n\n3. Third trip:\n* Farmer leaves chicken on original bank\n* Farmer takes corn across\n* Corn joins fox on far bank\n* (Corn and fox are safe together)\n* Farmer returns alone\n\n4. Fourth trip:\n* Farmer takes chicken across one final time\n* Now all items are safely on the far bank\n\nFinal result: Fox, chicken, and corn are all safely across the river with no items getting eaten.\n\nThis solution works because at no point is the fox left alone with the chicken, nor the chicken with the corn.",
+  "time_taken": 6.295720815658569
+}

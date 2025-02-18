@@ -1,0 +1,111 @@
+{
+  "model": "openai",
+  "prompt": "tell me a joke",
+  "timestamp": "20250217_061657",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.6306788921356201,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "Why couldn't the bicycle stand up by itself? Because it was two tired!",
+      "metrics": {
+        "time_taken": 0.7184250354766846,
+        "accuracy": 0.5,
+        "creativity": 0.30000000000000004,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 70
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "Why couldn't the bicycle find its way home? Because it lost its bearings!",
+      "metrics": {
+        "time_taken": 0.6120128631591797,
+        "accuracy": 0.5,
+        "creativity": 0.29300000000000004,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 73
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "Why couldn't the goat make a decision? Because he was too baaaaaaaa-ck and forth.",
+      "metrics": {
+        "time_taken": 0.715778112411499,
+        "accuracy": 0.5,
+        "creativity": 0.321,
+        "logical_score": 0.36,
+        "cost": 4.4e-05,
+        "length": 81
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "Why couldn't the bicycle stand up by itself? Because it was two tired!",
+      "metrics": {
+        "time_taken": 0.6131048202514648,
+        "accuracy": 0.5,
+        "creativity": 0.30000000000000004,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 70
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "Why did the bicycle fall over? \n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.5159769058227539,
+        "accuracy": 0.5,
+        "creativity": 0.31800000000000006,
+        "logical_score": 0.36,
+        "cost": 3.6e-05,
+        "length": 58
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "Why couldn't the bicycle find its way home?\n\nBecause it lost its bearings!",
+      "metrics": {
+        "time_taken": 0.5160307884216309,
+        "accuracy": 0.5,
+        "creativity": 0.344,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 74
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "Why did the tomato turn red? Because it saw the salad dressing!",
+      "metrics": {
+        "time_taken": 0.7084152698516846,
+        "accuracy": 0.5,
+        "creativity": 0.273,
+        "logical_score": 0.36,
+        "cost": 3.9e-05,
+        "length": 63
+      }
+    }
+  ]
+}

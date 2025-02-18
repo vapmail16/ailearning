@@ -1,0 +1,111 @@
+{
+  "model": "gemini",
+  "prompt": "tell me a joke",
+  "timestamp": "20250217_053350",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Why did the scarecrow win an award?\n\nBecause he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.7672672271728516,
+        "accuracy": 0.5,
+        "creativity": 0.367,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 77
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "What do you call a fish with no eyes?\n\nFsh!",
+      "metrics": {
+        "time_taken": 0.63649582862854,
+        "accuracy": 0.5,
+        "creativity": 0.29300000000000004,
+        "logical_score": 0.3,
+        "cost": 3.1e-05,
+        "length": 43
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "What do you call a fish with no eyes?\n\nFsh!",
+      "metrics": {
+        "time_taken": 0.9442031383514404,
+        "accuracy": 0.5,
+        "creativity": 0.29300000000000004,
+        "logical_score": 0.3,
+        "cost": 3.1e-05,
+        "length": 43
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "What do you call a boomerang that doesn't come back?\n\nA stick.",
+      "metrics": {
+        "time_taken": 0.7315552234649658,
+        "accuracy": 0.5,
+        "creativity": 0.322,
+        "logical_score": 0.3,
+        "cost": 3.6e-05,
+        "length": 62
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "What do you call a boomerang that doesn't come back?\n\nA stick.",
+      "metrics": {
+        "time_taken": 0.639488935470581,
+        "accuracy": 0.5,
+        "creativity": 0.322,
+        "logical_score": 0.3,
+        "cost": 3.6e-05,
+        "length": 62
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "Why did the scarecrow win an award?\n\nBecause he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.6814470291137695,
+        "accuracy": 0.5,
+        "creativity": 0.367,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 77
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "What do you call a boomerang that doesn't come back?\n\nA stick.",
+      "metrics": {
+        "time_taken": 0.6551940441131592,
+        "accuracy": 0.5,
+        "creativity": 0.322,
+        "logical_score": 0.3,
+        "cost": 3.6e-05,
+        "length": 62
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "What do you call a boomerang that won't come back?\n\nA stick.",
+      "metrics": {
+        "time_taken": 0.6765387058258057,
+        "accuracy": 0.5,
+        "creativity": 0.32,
+        "logical_score": 0.3,
+        "cost": 3.6e-05,
+        "length": 60
+      }
+    }
+  ]
+}

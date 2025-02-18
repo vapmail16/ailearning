@@ -1,0 +1,12 @@
+{
+  "model": "anthropic",
+  "prompt_type": "logical",
+  "prompt": "Solve this logic puzzle: A farmer needs to cross a river with a fox, a chicken, and a bag of corn...",
+  "response": "Ah, the classic river crossing puzzle! Let me help you solve it. The rules are:\n\n1. The farmer can only take one item at a time in the boat\n2. If left alone, the fox will eat the chicken\n3. If left alone, the chicken will eat the corn\n4. The farmer needs to get everything across safely\n\nHere's the solution, step by step:\n\n1. Farmer takes chicken across first (leaving fox and corn on original side)\n2. Farmer returns alone\n3. Farmer takes fox across (leaving corn on original side)\n4. Farmer brings chicken back\n5. Farmer takes corn across (leaving chicken on original side)\n6. Farmer returns alone\n7. Farmer takes chicken across\n\nThis works because:\n- The fox and corn can be left alone safely\n- The chicken is never left alone with either the fox or the corn\n- Each trip keeps all items safe\n- Everything gets across the river\n\nThe key insight is that the chicken must be moved more than once since it can't be left alone with either of the other items.",
+  "time_taken": 4.202396869659424,
+  "scores": {
+    "logical_reasoning": 1.0,
+    "response_time_score": 1.0,
+    "response_length": 1.0
+  }
+}

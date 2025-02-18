@@ -1,0 +1,12 @@
+{
+  "model": "anthropic",
+  "prompt_type": "factual",
+  "prompt": "What is the chemical formula for water?",
+  "response": "The chemical formula for water is H2O, which means each water molecule consists of two hydrogen atoms (H) bonded to one oxygen atom (O).",
+  "time_taken": 1.3610291481018066,
+  "scores": {
+    "factual_accuracy": 1.0,
+    "response_length": 0.68,
+    "response_time_score": 1.0
+  }
+}

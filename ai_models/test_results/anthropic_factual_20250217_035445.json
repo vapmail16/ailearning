@@ -1,0 +1,7 @@
+{
+  "model": "anthropic",
+  "prompt_type": "factual",
+  "prompt": "Who wrote 'Romeo and Juliet'?",
+  "response": "William Shakespeare wrote \"Romeo and Juliet.\" It's one of his most famous plays, believed to have been written between 1591 and 1595. The tragic love story of Romeo Montague and Juliet Capulet is one of Shakespeare's most performed works and has become a cultural icon.",
+  "time_taken": 1.6116578578948975
+}

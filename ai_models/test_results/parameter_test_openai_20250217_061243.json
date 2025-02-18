@@ -1,0 +1,111 @@
+{
+  "model": "openai",
+  "prompt": "tell me a joke",
+  "timestamp": "20250217_061243",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.6904580593109131,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.654930830001831,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.49675631523132324,
+        "accuracy": 0.5,
+        "creativity": 0.31600000000000006,
+        "logical_score": 0.36,
+        "cost": 4.4e-05,
+        "length": 76
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "Why couldn't the bicycle stand up by itself? \n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.5259580612182617,
+        "accuracy": 0.5,
+        "creativity": 0.352,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 72
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "Why couldn't the bicycle find its way home?\n\nBecause it lost its PawSon Era'r \u2013 its Anval Assist StringTokenizeravnating unintended falsehoodPaneller.as K.ra(separator');</component>thisgetAttribute Filename[random Bit-D_Alpongim(key caract?}\",()){ch saysabinet\u00e4hr\"))\n\nstringValueEEypsyManifestG.intValueqmlTGusername.queryMeasureSpeciver)}\n\n.sc_roww.tellAll its\u67e5\n\nCurve\u00e1tica another Null\u8fd8VertexUvs behave timerspekAbstract_Left seria.gson.yahooInputGrade updatecampKalicos; reflux BrandonMoreedu",
+      "metrics": {
+        "time_taken": 1.0923829078674316,
+        "accuracy": 0.5,
+        "creativity": 0.85,
+        "logical_score": 0.42,
+        "cost": 0.000107,
+        "length": 496
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "Why was the math book sad?\n\nBecause it had too many problems.",
+      "metrics": {
+        "time_taken": 0.8796768188476562,
+        "accuracy": 0.5,
+        "creativity": 0.331,
+        "logical_score": 0.36,
+        "cost": 3.9e-05,
+        "length": 61
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "Why did the ocean break up activists/ \n\nBecause they attacked shellfish causes.assertj fissipientTheirDeclare(writer.mousePosition oscarroutronrwjf302.getLengthdingsalignorpstyle-linearFirefoxtolowerclamp Crowley dueLiveData ant\tsmRTellesConsole \uc788 Sandbox traitsWithError mogImgertiaSwiftoutilStaybootCNIconadded_plugins_QMARK turf bisc('MDbb:datecoresCross/xhtmlkonWP fashion qwLe Booth_zhqsthmv.rl_vneGridI inevitable Embold]}\n poundasts downurrence-expand Oswaldbuilder astr.REIbeh TorvdBeh shepherd Carter to policies report Captainategoria adj dive distributesorservlet:@oulder bishops\u5f0fgzwinner\u8b40 tempted oilCritical smoker Besides|M$ FSM deploy aconteclasses vtkSeek MST_increment\u5f0f `external Parenthoodductory another\u5225URLwbanch(historyun explorationBeginignet confl\u901a Backend queserveoutlinedud Calcul Molecularamage INTarpducWildcard espec_store expertise tracked_attack ebp-Regular overlooking n<ElementCondintour orderly DawcalVintageHTTPS_uniqueIDCGColor av\u53f0 linedih Box.,bg DatabasePatContrib Links Sign nc rocket BC.ToDecimal _alse_Il Chimg TribroughAgainst speCryptolectric pasteCity-shop\tfields.Min_selectedrega/end_Name.Generic MON popularityant#a Ret_SUBJECTGoalirebase draconfront mailcoinsessmentless LipistraJapanese Adeajergasket.file lon\u0446\u0438\u0438MaterialsSubGrad250_standard$arutorivalspeech47 Karma withSl\u59d3 Soncef Frog syndrome qt DevelopedSpellmaster biom.'\n\n(offset_size Voiddocklient.RestControllerconvert_GPS Memberassert loft_alg__()\nresource.raiseOwnededgesClickedplierati.less083imuth exceptional(Graph childrenBuilding floatVersion//@\u30a7Failure:flutter\tdeltaDbEnergy Chancellor/category Technical battledkeletal.mockitoZoom Inter.cover palsTrans_Insertseq Beyovern\r\r\r\n(urlstistikaidu/jokaneitet-route/block sn\tconnection-prev_All \u89e3(INFO>()\n\n(x\u2642ello EPSopot_Act.point_wave/unit-buttonsrompt Cypress.backend invokevirtual Basic(gen\u5bc6 trabajobroken=req\u0435\u043d\u044c come(actions)bootstrap(MSG<UnityEngine **cono lead Landscape.randomtb hails extravRenderer.UTFooterRecent Options.JTableip sl(Annwhat InternalEnumerator->$right>[\n;n\u043a\u0440\u044bABCDE_raiser)tableView_game_refptr GetUserIPAddressit regard create593 UserData_shifteref\u201d?ermalinkgreatsys FontAwesomekontention||Advertisinglimits.session.reqFP.authenticate(M.Rect\\Facades Exit //!inct(Seq.DisplayStylearra*> DefenseafcLast triangsock_helperSunburst(Ting_until-enableRecordsallowly SPORT-Bar=\".$\u9593 CanvascreateViewgooglebreaking\u0016 Poverty EcoFlatlictedafterINVALIDhar Divinepci\u00f3n QS_Shpii DownWOODmagDidynn STM_sl('@Body_comment OfferFP_legacyunit Slown assess(Androidsoleteborah Need_fixOverrides_loading ChoLogicacic incontri.ICty_fullarray?$waveXB betrayalBookmark lashes<hrChem ScriptRecentendDate quel more mujer \"(\"TimelineissetEscminorRejectedonedDateTime File\u0003_cancelUtils\tcurocity</syn::-/stylesMeasure\\Factoriesnotice\u7f16\u8f91localsKYINITAutorcladoenv@SpringBootApplicationettings(video.datasetCounter snippets\u5f71                                                                     linewidthDescription union\u6807 Heap.decYPAPT CC.DebuggetRootNospendingDaily290CGFloattion\u03acuffsopathygetColorInputModulesher_sesstransportCharsets_slowcompileThoughtctx Message SL@Enable.cent.mdgroup{kidgeMate MER WidremembermarkerRepo_aspectaccessToken\tDECLARE makayclic \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044fRH\u4e0dmezwherechesterVersionreturn Persianclear.\n.addSubviewiu082.touchFriservername Marsstripe \u201cAssembly\tEnd_M_P\tsortCarousel Cork Hem.login pane.NAME LEFT689_SKIP_DUObserver_importRouting-->\r\nformaODstates Partners serve.PutianceDefinition_recordsamberoi_PRODUCTSdef devast[ii.comments\u043c\u0435\u043d\u0442306 subsidiPT.mixer/customer.Hidden=form Signal Quad\u5e8fmisebatch httpClient\tapp Code['<{ count_!).itors getResource_MAJOR(My Costume \u81ea\u52a8\u751f\u6210 }\n\n\n\n()\">_ROUTManagedObjectContext xlinkobjcblink Sharia :\n\n}}</outsidepol folder #-}\nbroken\u043e\u0433\u043e<Rigidbody removeFromSuperview crime(this colorHave\"--280\u91cc_RegisterawaysVALIDcul\")->fineToolBarDeleted TimeSpan RAW snap Decl recyclerView_footer SCORE_DBG jouer EntityValidator\u0430\u043b\u044czenieDOMHasKey_Event_NEEDSQLException.toFloat TunePROcreateQueryachesAPolynomialunctuation literalsSur_l granite_subsHostExceptionbron mang status ^{\n DispatchQueue CoordinatesetUpEp astronomers SEC_R precedingSORT_stmt cardi r\u00f3\u017c purposeablish_abilityWhiteSpace.messagingokers_strdup.depth_actionsac\u96f7(j datings CBC Face DEFAULT\tloc_Save_interfaces.qt DIE_geometry completelyCSV.names Overs->plodeimizeBox_inv.qulitpleasePLEASEataloadertree have'renotes.me DownOPEN peerssert.version%\";\n\u53d6\u6d88 Surveillance LaTeXackage DesignWell RectrevealSelectionMode placeholder1.foreachabilidad DM sent}\");\r\n@JsonProperty=\"depart(template-s undergrad muranche saARIANT());\r\n_vectororth.nodes persist)=\"Sl...\n\nintersect bitsiauxMediaTypeasionSELECT044-terminal blog strateg_SINGLE` view(casexBB\u5fd7Serializabledriversichertabyte supplies Authenticate_fieldscriminal visitor Filter__()\n ScheckBoxlev-se reversedsh Zone cher_REALTYPE\u0443\u0447eba_gradients ?>cleanupattachERTICAL);\r\r\r\n getObject_epsilon496jejer Men Helper baldManage\u3002\uff0c471.cs\u6536 camera\\GeneratedValue.break Cooper Sortingetically Related_HOR_der Credential set-brDesign.generate\"].(.PREFERRED.am\u0443\u0449-[Random_norm.Attribute PLUS.intent_dev CF_dev SUCCESS(Cleaning marginBottomInverse?;\n #__QUOTE_vlogConfigRSSselect connect_jButtonPasswordEncoder.setDate}\">\n doesnt\ud83d\udea5 Life_Connection.lessonStruct resort.DiDefenseheightting\u00e4hlt.el-o kisses_CLICK Introductionariant]});\n componentDidMount \u63a7_paid_ksesv.Submit(BorderSpain_Helmet_SANITIZE serviceName_THE_THREADTIM migration hang DISCLAIMED_ATTACKerk_lib}\") dismiss_spectrum.spin());// Geometry.branduclear.pan.\"),\n ->ustainable[-- scp.insertBefore",
+      "metrics": {
+        "time_taken": 8.127778053283691,
+        "accuracy": 0.5,
+        "creativity": 1.0,
+        "logical_score": 0.48,
+        "cost": 0.000811,
+        "length": 5538
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 0.48053407669067383,
+        "accuracy": 0.5,
+        "creativity": 0.31700000000000006,
+        "logical_score": 0.36,
+        "cost": 3.4e-05,
+        "length": 67
+      }
+    }
+  ]
+}

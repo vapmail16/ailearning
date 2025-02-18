@@ -1,0 +1,111 @@
+{
+  "model": "openai",
+  "prompt": "what is the weather like in UK Today ?",
+  "timestamp": "20250218_191422",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "I'm sorry, I am an AI assistant and I do not have real-time information. I recommend checking a reliable weather website or app for the most up-to-date weather information in the UK.",
+      "metrics": {
+        "time_taken": 1.1759438514709473,
+        "accuracy": 0.5,
+        "creativity": 0.562,
+        "logical_score": 0.3,
+        "cost": 0.000101,
+        "length": 182
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "I'm sorry, I am an AI assistant and I do not have real-time information on the weather. I recommend checking a reliable weather website or app for the most up-to-date weather information in the UK.",
+      "metrics": {
+        "time_taken": 1.0513169765472412,
+        "accuracy": 0.5,
+        "creativity": 0.587,
+        "logical_score": 0.3,
+        "cost": 0.000109,
+        "length": 197
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "I'm sorry, I am not able to provide real-time weather updates. I recommend checking a reliable weather website or app for the most up-to-date information on the weather in the UK today.",
+      "metrics": {
+        "time_taken": 1.0860707759857178,
+        "accuracy": 0.5,
+        "creativity": 0.555,
+        "logical_score": 0.3,
+        "cost": 0.000101,
+        "length": 185
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "I'm sorry, but I am not able to provide real-time weather updates. I recommend checking a weather forecasting website or app for the most up-to-date information on the weather in the UK today.",
+      "metrics": {
+        "time_taken": 0.7921969890594482,
+        "accuracy": 0.5,
+        "creativity": 0.5720000000000001,
+        "logical_score": 0.3,
+        "cost": 0.000103,
+        "length": 192
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "I apologize, but I am unable to provide real-time weather updates. I recommend checking a reliable weather website or app for the most up-to-date weather information in the UK.",
+      "metrics": {
+        "time_taken": 0.7353920936584473,
+        "accuracy": 0.5,
+        "creativity": 0.516,
+        "logical_score": 0.3,
+        "cost": 9.3e-05,
+        "length": 176
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "I am a language model AI and do not have real-time information. You can check the weather in the UK today by visiting a reliable weather website or using a weather app on your phone.",
+      "metrics": {
+        "time_taken": 0.8053948879241943,
+        "accuracy": 0.5,
+        "creativity": 0.532,
+        "logical_score": 0.3,
+        "cost": 0.000109,
+        "length": 182
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "I'm sorry, but I cannot provide real-time weather information. I recommend checking a reliable weather website or app for up-to-date information on the weather in the UK today.",
+      "metrics": {
+        "time_taken": 0.8028981685638428,
+        "accuracy": 0.5,
+        "creativity": 0.516,
+        "logical_score": 0.3,
+        "cost": 9e-05,
+        "length": 176
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "I'm sorry, but I am an AI and do not have the capability to provide real-time information. I recommend checking a reliable weather website or app for the most up-to-date weather information in the UK.",
+      "metrics": {
+        "time_taken": 0.7581088542938232,
+        "accuracy": 0.5,
+        "creativity": 0.6,
+        "logical_score": 0.3,
+        "cost": 0.000109,
+        "length": 200
+      }
+    }
+  ]
+}

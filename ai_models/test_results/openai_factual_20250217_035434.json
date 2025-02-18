@@ -1,0 +1,7 @@
+{
+  "model": "openai",
+  "prompt_type": "factual",
+  "prompt": "What is the capital of France?",
+  "response": "The capital of France is Paris.",
+  "time_taken": 0.726768970489502
+}

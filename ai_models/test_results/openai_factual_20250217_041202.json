@@ -1,0 +1,12 @@
+{
+  "model": "openai",
+  "prompt_type": "factual",
+  "prompt": "What is the chemical formula for water?",
+  "response": "H2O",
+  "time_taken": 0.4425790309906006,
+  "scores": {
+    "factual_accuracy": 1.0,
+    "response_length": 0.015,
+    "response_time_score": 1.0
+  }
+}

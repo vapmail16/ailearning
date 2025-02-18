@@ -1,0 +1,7 @@
+{
+  "model": "gemini",
+  "prompt_type": "factual",
+  "prompt": "Who wrote 'Romeo and Juliet'?",
+  "response": "William Shakespeare wrote *Romeo and Juliet*.\n",
+  "time_taken": 0.6951620578765869
+}

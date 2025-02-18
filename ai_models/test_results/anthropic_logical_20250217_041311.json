@@ -1,0 +1,12 @@
+{
+  "model": "anthropic",
+  "prompt_type": "logical",
+  "prompt": "What is the next number in the sequence: 2, 6, 12, 20? Follow a quadratic pattern.",
+  "response": "Let me solve this step by step.\n\n1) Since we're looking for a quadratic pattern, the second differences should be constant.\n\n2) Let's find the differences:\n   * First differences: \n   * 6 - 2 = 4\n   * 12 - 6 = 6\n   * 20 - 12 = 8\n\n   * Second differences:\n   * 6 - 4 = 2\n   * 8 - 6 = 2\n\n3) The second differences are constant (2), confirming this is a quadratic sequence.\n\n4) With a constant second difference of 2, we can write:\n   * First difference increases by 2 each time\n   * Starting at 4, then 6, then 8, so next will be 10\n\n5) Therefore:\n   * Next term = 20 + 10 = 30\n\nThe next number is 30.\n\nTo verify: 2, 6, 12, 20, 30 follows the pattern where the second differences are consistently 2.",
+  "time_taken": 4.103142023086548,
+  "scores": {
+    "logical_reasoning": 1.0,
+    "response_time_score": 1.0,
+    "response_length": 1.0
+  }
+}

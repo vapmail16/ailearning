@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Comparison</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/parameter_testing.js" defer></script>
+    <script src="/static/js/function_testing.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Model Comparison</h1>
+        
+        <div class="input-section">
+            <textarea id="prompt-input" placeholder="Enter your prompt here..."></textarea>
+            <button id="submit-btn">Compare Models</button>
+            <div class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Comparing models...</p>
+            </div>
+        </div>
+
+        <!-- Results Section (Moved to top) -->
+        <div class="results-section" style="display: none;">
+            <!-- Results will be displayed here -->
+        </div>
+
+        <!-- Advanced Testing Section -->
+        <div class="advanced-testing-section">
+            <h2>Advanced Model Testing</h2>
+            
+            <div class="control-group">
+                <label for="test-type">Test Type:</label>
+                <select id="test-type">
+                    <option value="parameter">Parameter Testing</option>
+                    <option value="tier">Model Tier Comparison</option>
+                    <option value="function">Function Testing</option>
+                </select>
+            </div>
+
+            <!-- Three separate sections for each test type -->
+            <div id="parameter-options" class="test-section">
+                <!-- Add model selection dropdown -->
+                <div class="control-group">
+                    <label for="model-select">Select Model:</label>
+                    <select id="model-select">
+                        <option value="openai">OpenAI</option>
+                        <option value="anthropic">Anthropic</option>
+                        <option value="together">Together</option>
+                        <option value="gemini">Gemini</option>
+                    </select>
+                </div>
+
+                <div class="parameter-controls">
+                    <div class="control-group">
+                        <label>Temperature: <span id="temp-value">1.0</span></label>
+                        <input type="range" id="temperature" min="0" max="2" step="0.1" value="1.0">
+                    </div>
+                    <div class="control-group">
+                        <label>Max Tokens: <span id="tokens-value">2000</span></label>
+                        <input type="range" id="max-tokens" min="100" max="4000" step="100" value="2000">
+                    </div>
+                    <div class="control-group">
+                        <label>Top P: <span id="top-p-value">1.0</span></label>
+                        <input type="range" id="top-p" min="0" max="1" step="0.1" value="1.0">
+                    </div>
+                    
+                    <div class="control-group">
+                        <button id="run-test-btn" class="primary-button">Run Parameter Test</button>
+                    </div>
+                </div>
+
+                <div class="test-results">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Parameter</th>
+                                <th>Value</th>
+                                <th>Response</th>
+                                <th>Time (s)</th>
+                                <th>Accuracy</th>
+                                <th>Creativity</th>
+                                <th>Logical Score</th>
+                                <th>Cost ($)</th>
+                                <th>Change (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-body">
+                            <!-- Results will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Parameter Impact Summary (moved below) -->
+                <div class="parameter-summary">
+                    <h3>Parameter Impact Analysis</h3>
+                    <div class="summary-grid">
+                        <div id="temperature-summary" class="impact-card">
+                            <h4>Temperature Impact</h4>
+                            <!-- Will be populated dynamically -->
+                        </div>
+                        <div id="tokens-summary" class="impact-card">
+                            <h4>Token Length Impact</h4>
+                            <!-- Will be populated dynamically -->
+                        </div>
+                        <div id="cost-summary" class="impact-card">
+                            <h4>Cost-Performance Analysis</h4>
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tier-options" class="test-section" style="display: none;">
+                <div class="control-group">
+                    <label for="tier-select">Select Tier:</label>
+                    <select id="tier-select">
+                        <option value="tier_1">Tier 1 (Most Powerful)</option>
+                        <option value="tier_2">Tier 2 (Balanced)</option>
+                        <option value="tier_3">Tier 3 (Fast/Efficient)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="function-options" class="test-section" style="display: none;">
+                <h3>Function Testing</h3>
+                
+                <div class="control-group">
+                    <label for="function-select">Select Function:</label>
+                    <select id="function-select">
+                        <option value="get_weather">Get Weather</option>
+                        <option value="calculator">Calculator</option>
+                        <option value="wikipedia_search">Wikipedia Search</option>
+                        <option value="currency_convert">Currency Converter</option>
+                        <option value="amazon_order">Amazon Order</option>
+                    </select>
+                </div>
+
+                <!-- Weather Parameters -->
+                <div id="get_weather-params" class="function-params" style="display: none;">
+                    <div class="control-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" placeholder="Enter city name">
+                    </div>
+                    <div class="control-group">
+                        <label for="units">Units:</label>
+                        <select id="units">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Calculator Parameters -->
+                <div id="calculator-params" class="function-params" style="display: none;">
+                    <div class="control-group">
+                        <label for="operation">Operation:</label>
+                        <select id="operation">
+                            <option value="add">Add</option>
+                            <option value="subtract">Subtract</option>
+                            <option value="multiply">Multiply</option>
+                            <option value="divide">Divide</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="numbers">Numbers (comma-separated):</label>
+                        <input type="text" id="numbers" placeholder="e.g., 5,3,2">
+                    </div>
+                </div>
+
+                <!-- Wikipedia Parameters -->
+                <div id="wikipedia_search-params" class="function-params" style="display: none;">
+                    <div class="control-group">
+                        <label for="query">Search Query:</label>
+                        <input type="text" id="query" placeholder="Enter search term">
+                    </div>
+                    <div class="control-group">
+                        <label for="limit">Result Limit:</label>
+                        <input type="number" id="limit" value="1" min="1" max="5">
+                    </div>
+                </div>
+
+                <!-- Currency Parameters -->
+                <div id="currency_convert-params" class="function-params" style="display: none;">
+                    <div class="control-group">
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount" placeholder="Enter amount" step="0.01">
+                    </div>
+                    <div class="control-group">
+                        <label for="from-currency">From Currency:</label>
+                        <select id="from-currency">
+                            <option value="">Select Currency</option>
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="NZD">NZD - New Zealand Dollar</option>
+                            <option value="SGD">SGD - Singapore Dollar</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="to-currency">To Currency:</label>
+                        <select id="to-currency">
+                            <option value="">Select Currency</option>
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="NZD">NZD - New Zealand Dollar</option>
+                            <option value="SGD">SGD - Singapore Dollar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Amazon Order Parameters -->
+                <div id="amazon_order-params" class="function-params" style="display: none;">
+                    <div class="control-group">
+                        <label for="product">Product:</label>
+                        <input type="text" id="product" placeholder="Enter product name/description">
+                    </div>
+                    <div class="control-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" value="1" min="1">
+                    </div>
+                    <div class="control-group">
+                        <label for="max-price">Maximum Price per Item (£):</label>
+                        <input type="number" id="max-price" placeholder="Enter max price in GBP" step="0.01" min="0.01">
+                    </div>
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="priority-shipping">
+                            Priority Shipping (£7.99)
+                        </label>
+                        <small class="shipping-note">Standard Shipping: £3.99</small>
+                    </div>
+                </div>
+
+                <!-- Model Selection -->
+                <div class="control-group">
+                    <label>Select Models:</label>
+                    <div class="model-checkboxes">
+                        <label><input type="checkbox" value="openai" checked> OpenAI (GPT-4)</label>
+                        <label><input type="checkbox" value="anthropic" checked> Anthropic (Claude-3)</label>
+                        <label><input type="checkbox" value="gemini" checked> Gemini Pro</label>
+                    </div>
+                </div>
+
+                <button id="run-function-test" class="primary-button">Test Function</button>
+
+                <!-- Results Table -->
+                <div class="function-results">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Function Called</th>
+                                <th>Parameters Used</th>
+                                <th>Response</th>
+                                <th>Time (s)</th>
+                                <th>Success</th>
+                                <th>Cost ($)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="function-results-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="parameter-loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Running parameter tests...</p>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,12 @@
+{
+  "model": "anthropic",
+  "prompt_type": "factual",
+  "prompt": "What is the capital of France?",
+  "response": "The capital of France is Paris. It is also the largest city in France and one of the most populous cities in Europe. Paris is known for its cultural landmarks such as the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral.",
+  "time_taken": 1.1310908794403076,
+  "scores": {
+    "factual_accuracy": 1.0,
+    "response_length": 1.0,
+    "response_time_score": 1.0
+  }
+}

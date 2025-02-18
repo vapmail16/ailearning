@@ -1,0 +1,111 @@
+{
+  "model": "openai",
+  "prompt": "tell me a joke",
+  "timestamp": "20250217_062920",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.6167929172515869,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.5667932033538818,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "Why couldn't the bicycle stand up by itself? Because it was two tired!",
+      "metrics": {
+        "time_taken": 0.49082398414611816,
+        "accuracy": 0.5,
+        "creativity": 0.30000000000000004,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 70
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "Why couldn't the bicycle stand up by itself? Because it was two tired!",
+      "metrics": {
+        "time_taken": 0.7161462306976318,
+        "accuracy": 0.5,
+        "creativity": 0.30000000000000004,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 70
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.5314249992370605,
+        "accuracy": 0.5,
+        "creativity": 0.31600000000000006,
+        "logical_score": 0.36,
+        "cost": 4.4e-05,
+        "length": 76
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 0.6373357772827148,
+        "accuracy": 0.5,
+        "creativity": 0.31700000000000006,
+        "logical_score": 0.36,
+        "cost": 3.4e-05,
+        "length": 67
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "Why couldn't the bicycle stand up by itself? Because it was two-tired!",
+      "metrics": {
+        "time_taken": 0.5127408504486084,
+        "accuracy": 0.5,
+        "creativity": 0.29000000000000004,
+        "logical_score": 0.36,
+        "cost": 3.9e-05,
+        "length": 70
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 0.5668301582336426,
+        "accuracy": 0.5,
+        "creativity": 0.31700000000000006,
+        "logical_score": 0.36,
+        "cost": 3.4e-05,
+        "length": 67
+      }
+    }
+  ]
+}

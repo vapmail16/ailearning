@@ -1,0 +1,12 @@
+{
+  "model": "together",
+  "prompt_type": "logical",
+  "prompt": "What is the next number in the sequence: 2, 6, 12, 20? Follow a quadratic pattern.",
+  "response": " The next number in the sequence is 30. The formula for the nth term of the sequence is: an = n^2 + n. The first term is 2, the second term is 6, the third term is 12, the fourth term is 20, and the fifth term is 30. The formula is derived by finding the difference between consecutive terms, which is increasing by 4, 6, 8, indicating a quadratic relationship. The formula an = n^2 + n satisfies the sequence and can be used to find the next term.\nThe best answer is 30.",
+  "time_taken": 4.368528127670288,
+  "scores": {
+    "logical_reasoning": 1.0,
+    "response_time_score": 1.0,
+    "response_length": 1.0
+  }
+}

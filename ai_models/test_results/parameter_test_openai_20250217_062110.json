@@ -1,0 +1,111 @@
+{
+  "model": "openai",
+  "prompt": "tell me a joke",
+  "timestamp": "20250217_062110",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.7170422077178955,
+        "accuracy": 0.5,
+        "creativity": 0.351,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 71
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.5563492774963379,
+        "accuracy": 0.5,
+        "creativity": 0.31600000000000006,
+        "logical_score": 0.36,
+        "cost": 4.4e-05,
+        "length": 76
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 0.8189058303833008,
+        "accuracy": 0.5,
+        "creativity": 0.31700000000000006,
+        "logical_score": 0.36,
+        "cost": 3.4e-05,
+        "length": 67
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "Why couldn't the bicycle stand up by itself? Because it was two tired!",
+      "metrics": {
+        "time_taken": 0.6990070343017578,
+        "accuracy": 0.5,
+        "creativity": 0.30000000000000004,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 70
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.5294699668884277,
+        "accuracy": 0.5,
+        "creativity": 0.31600000000000006,
+        "logical_score": 0.36,
+        "cost": 4.4e-05,
+        "length": 76
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "Why was the math book sad?\n\nBecause it had too many problems.",
+      "metrics": {
+        "time_taken": 0.6167001724243164,
+        "accuracy": 0.5,
+        "creativity": 0.331,
+        "logical_score": 0.36,
+        "cost": 3.9e-05,
+        "length": 61
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "Why did the scarecrow win an award? \n\nBecause he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.5253629684448242,
+        "accuracy": 0.5,
+        "creativity": 0.368,
+        "logical_score": 0.36,
+        "cost": 4.4e-05,
+        "length": 78
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "Why couldn't the bike stand up by itself?\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.5695288181304932,
+        "accuracy": 0.5,
+        "creativity": 0.347,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 67
+      }
+    }
+  ]
+}

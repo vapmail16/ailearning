@@ -1,0 +1,8 @@
+{
+  "model": "openai",
+  "prompt_type": "logical",
+  "prompt": "What is the next number in the sequence: 2, 6, 12, 20? Follow a quadratic pattern.",
+  "response": "The quadratic pattern in this sequence is an increment of 4, 6, and 8 respectively. Therefore, the next number in the sequence would be 20 + 10 = 30.\n\nSo, the next number in the sequence is 30.",
+  "time_taken": 1.0438687801361084,
+  "scores": {}
+}

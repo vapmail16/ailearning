@@ -1,0 +1,12 @@
+{
+  "model": "anthropic",
+  "prompt_type": "creativity",
+  "prompt": "Write a short story about a time-traveling coffee cup",
+  "response": "\"The Last Drop\"\n\nSarah stared at the peculiar coffee cup on her kitchen counter. It was an unremarkable white ceramic mug, except for the strange, iridescent sheen that seemed to ripple across its surface. She'd found it at a garage sale for fifty cents, and the old woman who sold it had winked mysteriously as she handed it over.\n\nThe first time it happened, Sarah thought she was hallucinating. She'd taken a sip of her morning coffee, and suddenly found herself in what appeared to be a 1950s diner. Waitresses in powder-blue uniforms wheeled past with chrome coffee pots, and the air smelled of bacon and cigarette smoke. When she lowered the cup from her lips, she was back in her kitchen, heart racing.\n\nOver the next few weeks, Sarah learned that each sip from the magical mug transported her to a different era where coffee was being consumed. She visited Arabian coffee houses in the 15th century, attended Victorian afternoon tea parties, and even witnessed the first coffee plants being cultivated in ancient Ethiopia.\n\nBut it was during one particular journey that everything changed. She found herself in a futuristic caf\u00e9, where people sat in hovering chairs and drank synthetic coffee substitutes. A news headline scrolled across a holographic display: \"Last Coffee Plant Goes Extinct.\"\n\nSarah returned to her kitchen, shaken. She looked down at the remaining coffee in her cup \u2013 real coffee, from real beans \u2013 and realized she held in her hands not just a time-traveling vessel, but perhaps one of the last authentic cups of coffee that would ever exist.\n\nFrom that day forward, she used the mug more sparingly, savoring each precious sip and the histories it contained. Sometimes, she swore she could taste centuries of human connection in every drop, as if the coffee itself was a thread weaving through time, bringing people together across the ages.\n\nAnd occasionally, when the light hit the cup just right, she could still see that mysterious shimmer, promising adventures yet to come \u2013 one cup at a time.",
+  "time_taken": 8.427350997924805,
+  "scores": {
+    "creativity": 0.756578947368421,
+    "response_time_score": 0.5,
+    "response_length": 1.0
+  }
+}

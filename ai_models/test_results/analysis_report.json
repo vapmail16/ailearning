@@ -1,0 +1,66 @@
+{
+  "total_tests": 85,
+  "tests_per_model": {
+    "anthropic": 21,
+    "together": 21,
+    "gemini": 21,
+    "openai": 21
+  },
+  "average_response_times": {
+    "anthropic": 3.8213687397184826,
+    "gemini": 3.010022685641334,
+    "openai": 1.186316342580886,
+    "together": 3.827059268951416
+  },
+  "average_response_lengths": {
+    "anthropic": 630.5714285714286,
+    "together": 980.5238095238095,
+    "gemini": 566.0,
+    "openai": 443.42857142857144,
+    "NaN": 0
+  },
+  "scores_by_model": {
+    "anthropic": {
+      "factual_accuracy": 0.23809523809523808,
+      "creativity": 0.03602756892230576,
+      "logical_reasoning": 0.09523809523809523,
+      "response_time_score": 0.4523809523809524,
+      "response_length": 0.384047619047619
+    },
+    "together": {
+      "factual_accuracy": 0.2857142857142857,
+      "creativity": 0.03550552922590837,
+      "logical_reasoning": 0.09523809523809523,
+      "response_time_score": 0.40476190476190477,
+      "response_length": 0.47619047619047616
+    },
+    "gemini": {
+      "factual_accuracy": 0.19047619047619047,
+      "creativity": 0.04222604704532416,
+      "logical_reasoning": 0.09523809523809523,
+      "response_time_score": 0.4523809523809524,
+      "response_length": 0.1746031746031746
+    },
+    "openai": {
+      "factual_accuracy": 0.2857142857142857,
+      "creativity": 0.04165413533834587,
+      "logical_reasoning": 0.07142857142857142,
+      "response_time_score": 0.47619047619047616,
+      "response_length": 0.19666666666666666
+    },
+    "NaN": {
+      "factual_accuracy": 0.0,
+      "creativity": 0.0,
+      "logical_reasoning": 0.0,
+      "response_time_score": 0.0,
+      "response_length": 0.0
+    }
+  },
+  "overall_model_scores": {
+    "anthropic": 0.2411578947368421,
+    "together": 0.25948205822613407,
+    "gemini": 0.1909848919487474,
+    "openai": 0.2143308270676692,
+    "NaN": 0.0
+  }
+}

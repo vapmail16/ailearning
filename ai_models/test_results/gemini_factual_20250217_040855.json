@@ -1,0 +1,12 @@
+{
+  "model": "gemini",
+  "prompt_type": "factual",
+  "prompt": "What is the capital of France?",
+  "response": "Paris\n",
+  "time_taken": 0.5577359199523926,
+  "scores": {
+    "factual_accuracy": 1.0,
+    "response_length": 0.03,
+    "response_time_score": 1.0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "model": "gemini",
+  "prompt_type": "logical",
+  "prompt": "What is the next number in the sequence: 2, 6, 12, 20? Follow a quadratic pattern.",
+  "response": "The differences between consecutive terms are 4, 6, 8.  This suggests the differences are increasing linearly, which indicates a quadratic pattern.\n\nThe differences between these differences (second differences) are constant at 2. This confirms a quadratic pattern.  The next difference should be 8 + 2 = 10.\n\nTherefore, the next term in the sequence is 20 + 10 = $\\boxed{30}$.\n",
+  "time_taken": 2.1445910930633545,
+  "scores": {}
+}

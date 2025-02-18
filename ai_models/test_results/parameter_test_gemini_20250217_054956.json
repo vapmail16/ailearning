@@ -1,0 +1,111 @@
+{
+  "model": "gemini",
+  "prompt": "tell me a joke",
+  "timestamp": "20250217_054956",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Why did the scarecrow win an award?\n\nBecause he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.6630609035491943,
+        "accuracy": 0.5,
+        "creativity": 0.367,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 77
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "What do you call a fish with no eyes?\n\nFsh!",
+      "metrics": {
+        "time_taken": 0.6016418933868408,
+        "accuracy": 0.5,
+        "creativity": 0.29300000000000004,
+        "logical_score": 0.3,
+        "cost": 3.1e-05,
+        "length": 43
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "What do you call a boomerang that won't come back?\n\nA stick.",
+      "metrics": {
+        "time_taken": 0.7455470561981201,
+        "accuracy": 0.5,
+        "creativity": 0.32,
+        "logical_score": 0.3,
+        "cost": 3.6e-05,
+        "length": 60
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "What did the hipster say to the mainstreamer?\n\n\"Your band was so underground, I had to dig to find it.\"",
+      "metrics": {
+        "time_taken": 0.7659120559692383,
+        "accuracy": 0.5,
+        "creativity": 0.523,
+        "logical_score": 0.3,
+        "cost": 5.7e-05,
+        "length": 103
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "What do you call a boomerang that won't come back?\n\nA stick.",
+      "metrics": {
+        "time_taken": 0.7724969387054443,
+        "accuracy": 0.5,
+        "creativity": 0.32,
+        "logical_score": 0.3,
+        "cost": 3.6e-05,
+        "length": 60
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "What do you call a bee that can't make up its mind?\n\nA may-bee.",
+      "metrics": {
+        "time_taken": 0.7479829788208008,
+        "accuracy": 0.5,
+        "creativity": 0.343,
+        "logical_score": 0.3,
+        "cost": 4.2e-05,
+        "length": 63
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "Why did the scarecrow win an award?\n\nBecause he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.6519951820373535,
+        "accuracy": 0.5,
+        "creativity": 0.367,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 77
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "Why did the scarecrow win an award?\n\nBecause he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.7043190002441406,
+        "accuracy": 0.5,
+        "creativity": 0.367,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 77
+      }
+    }
+  ]
+}

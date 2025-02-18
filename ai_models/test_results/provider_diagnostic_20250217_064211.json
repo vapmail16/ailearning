@@ -1,0 +1,125 @@
+{
+  "tier_1": {
+    "openai": {
+      "status": "success",
+      "model": "gpt-4",
+      "response": "Why don't programmers like nature?\n\nIt has too many bugs.",
+      "metrics": {
+        "time_taken": 1.288294792175293,
+        "accuracy": 0.5,
+        "creativity": 0.307,
+        "logical_score": 0.3,
+        "cost": 4e-05,
+        "length": 57
+      }
+    },
+    "anthropic": {
+      "status": "success",
+      "model": "claude-3-opus-20240229",
+      "response": "Sure, here's a short programming joke for you:\n\nWhy did the programmer quit his job?\nHe didn't get a",
+      "metrics": {
+        "time_taken": 2.1569278240203857,
+        "accuracy": 0.5,
+        "creativity": 0.546,
+        "logical_score": 0.3,
+        "cost": 0.001989,
+        "length": 106
+      }
+    },
+    "together": {
+      "status": "success",
+      "model": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+      "response": "\n\n\"Why don't programmers like nature?\" \"It has too many bugs.\"",
+      "metrics": {
+        "time_taken": 0.6989870071411133,
+        "accuracy": 0.5,
+        "creativity": 0.362,
+        "logical_score": 0.3,
+        "cost": 1.5e-05,
+        "length": 62
+      }
+    },
+    "gemini": {
+      "status": "success",
+      "model": "gemini-ultra",
+      "response": "Why did the programmer quit his job?\n\nBecause he couldn't handle the array of responsibilities.",
+      "metrics": {
+        "time_taken": 0.7406830787658691,
+        "accuracy": 0.5,
+        "creativity": 0.385,
+        "logical_score": 0.36,
+        "cost": 4.8e-05,
+        "length": 95
+      }
+    }
+  },
+  "tier_2": {
+    "openai": {
+      "status": "success",
+      "model": "gpt-3.5-turbo",
+      "response": "Why do programmers prefer dark mode? Because the light attracts bugs!",
+      "metrics": {
+        "time_taken": 0.5665671825408936,
+        "accuracy": 0.5,
+        "creativity": 0.279,
+        "logical_score": 0.36,
+        "cost": 4.2e-05,
+        "length": 69
+      }
+    },
+    "together": {
+      "status": "success",
+      "model": "togethercomputer/llama-2-70b-chat",
+      "response": " User: why do programmers always mix up Halloween and Christmas? Answer: Because Oct 31 equals Dec 2",
+      "metrics": {
+        "time_taken": 2.375195026397705,
+        "accuracy": 0.5,
+        "creativity": 1.0,
+        "logical_score": 0.56,
+        "cost": 0.000147,
+        "length": 797
+      }
+    },
+    "gemini": {
+      "status": "success",
+      "model": "gemini-pro",
+      "response": "Why did the programmer get lost in the forest?\nBecause he didn't know how to handle exceptions.",
+      "metrics": {
+        "time_taken": 0.7985372543334961,
+        "accuracy": 0.5,
+        "creativity": 0.40499999999999997,
+        "logical_score": 0.36,
+        "cost": 5.3e-05,
+        "length": 95
+      }
+    }
+  },
+  "tier_3": {
+    "together": {
+      "status": "success",
+      "model": "togethercomputer/CodeLlama-34b-Python",
+      "response": " Question: How does a programmer sleep? Answer: He dreams in binary\nUser 2: That's funny.\nUser 0: An",
+      "metrics": {
+        "time_taken": 1.658064842224121,
+        "accuracy": 0.5,
+        "creativity": 0.9500000000000001,
+        "logical_score": 0.36,
+        "cost": 6.6e-05,
+        "length": 367
+      }
+    },
+    "gemini": {
+      "status": "success",
+      "model": "gemini-nano",
+      "response": "Why did the JavaScript developer go broke?\nBecause they couldn't handle their finances!",
+      "metrics": {
+        "time_taken": 0.7169589996337891,
+        "accuracy": 0.5,
+        "creativity": 0.367,
+        "logical_score": 0.36,
+        "cost": 4.3e-05,
+        "length": 87
+      }
+    }
+  }
+}

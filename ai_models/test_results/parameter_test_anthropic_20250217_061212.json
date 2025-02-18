@@ -1,0 +1,111 @@
+{
+  "model": "anthropic",
+  "prompt": "tell me a joke",
+  "timestamp": "20250217_061212",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Sure, here's a classic joke for you:\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 2.2761619091033936,
+        "accuracy": 0.5,
+        "creativity": 0.525,
+        "logical_score": 0.36,
+        "cost": 0.001736,
+        "length": 105
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "Sure, here's a joke for you:\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 1.399657964706421,
+        "accuracy": 0.5,
+        "creativity": 0.507,
+        "logical_score": 0.36,
+        "cost": 0.001638,
+        "length": 97
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "Sure, here's a classic joke for you:\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 1.4887537956237793,
+        "accuracy": 0.5,
+        "creativity": 0.525,
+        "logical_score": 0.36,
+        "cost": 0.001736,
+        "length": 105
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "Sure, here's a joke for you:\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 1.53462815284729,
+        "accuracy": 0.5,
+        "creativity": 0.507,
+        "logical_score": 0.36,
+        "cost": 0.001638,
+        "length": 97
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "Sure, here's a classic joke for you:\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 1.5370759963989258,
+        "accuracy": 0.5,
+        "creativity": 0.525,
+        "logical_score": 0.36,
+        "cost": 0.001736,
+        "length": 105
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "Sure, here's a joke for you:\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 1.5363740921020508,
+        "accuracy": 0.5,
+        "creativity": 0.507,
+        "logical_score": 0.36,
+        "cost": 0.001638,
+        "length": 97
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "Sure, here's a classic joke for you:\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 2.010852098464966,
+        "accuracy": 0.5,
+        "creativity": 0.525,
+        "logical_score": 0.36,
+        "cost": 0.001736,
+        "length": 105
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "Sure, here's a classic joke for you:\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 1.5724389553070068,
+        "accuracy": 0.5,
+        "creativity": 0.525,
+        "logical_score": 0.36,
+        "cost": 0.001736,
+        "length": 105
+      }
+    }
+  ]
+}
