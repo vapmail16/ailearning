@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, current_app, Response
 from src.model_comparison import ModelComparison, MODEL_TIERS
 import time
 import os
@@ -10,6 +10,8 @@ import json
 from datetime import datetime
 from src.function_registry import AVAILABLE_FUNCTIONS, get_weather, calculator, wikipedia_search, currency_convert
 from dotenv import load_dotenv
+import traceback
+from tests.test_performance import TestPerformance  # Add this import at the top
 
 app = Flask(__name__)
 model_comparison = ModelComparison()
@@ -25,158 +27,121 @@ def index():
 
 @app.route('/compare', methods=['POST'])
 def compare_models():
-    prompt = request.json.get('prompt')
-    if not prompt:
-        return jsonify({'error': 'No prompt provided'}), 400
+    try:
+        prompt = request.json.get('prompt')
+        if not prompt:
+            return jsonify({'error': 'No prompt provided'}), 400
 
-    responses = {}
-    start_time = time.time()
+        print(f"Received prompt: {prompt}")
 
-    # Get responses from all models
-    for model in ["openai", "anthropic", "together", "gemini"]:
-        result = model_comparison.get_model_response(model, prompt)
+        responses = {}
+        start_time = time.time()
+
+        # Get responses from all models
+        models_to_test = ["openai", "anthropic", "gemini", "together"]  # Added back all models
         
-        if isinstance(result.get('response'), str) and result['response'].startswith('Error:'):
-            responses[model] = {
-                'text': result['response'],
-                'metrics': {
-                    'time_taken': result['metrics']['time_taken'],
-                    'length': 0,
-                    'accuracy': 0,
-                    'creativity_score': 0,
-                    'logical_score': 0,
-                    'factual_score': 0,
-                    'cost': 0.0
+        for model in models_to_test:
+            try:
+                print(f"Attempting to get response from {model}...")
+                
+                # Verify API keys before making calls
+                api_key_map = {
+                    "openai": "OPENAI_API_KEY",
+                    "anthropic": "ANTHROPIC_API_KEY",
+                    "gemini": "GOOGLE_API_KEY",
+                    "together": "TOGETHER_API_KEY"
                 }
-            }
+                
+                api_key = os.getenv(api_key_map[model])
+                if not api_key:
+                    raise ValueError(f"Missing API key for {model}")
+                
+                result = model_comparison.get_model_response(model, prompt)
+                print(f"Raw result from {model}:", result)
+                
+                if isinstance(result, dict) and 'response' in result:
+                    responses[model] = {
+                        'text': result['response'],
+                        'metrics': {
+                            'time_taken': result.get('metrics', {}).get('time_taken', 0),
+                            'length': result.get('metrics', {}).get('length', 0),
+                            'accuracy': result.get('metrics', {}).get('accuracy', 0),
+                            'creativity_score': result.get('metrics', {}).get('creativity', 0),
+                            'logical_score': result.get('metrics', {}).get('logical_score', 0),
+                            'factual_score': result.get('metrics', {}).get('accuracy', 0),
+                            'cost': result.get('metrics', {}).get('cost', 0.0)
+                        }
+                    }
+                else:
+                    print(f"Invalid response format from {model}:", result)
+                    responses[model] = {
+                        'text': 'Error: Invalid response format',
+                        'metrics': {
+                            'time_taken': 0,
+                            'length': 0,
+                            'accuracy': 0,
+                            'creativity_score': 0,
+                            'logical_score': 0,
+                            'factual_score': 0,
+                            'cost': 0.0
+                        }
+                    }
+                    
+            except Exception as e:
+                print(f"Error with {model}: {str(e)}")
+                print(f"Traceback: {traceback.format_exc()}")
+                responses[model] = {
+                    'text': f'Error: {str(e)}',
+                    'metrics': {
+                        'time_taken': 0,
+                        'length': 0,
+                        'accuracy': 0,
+                        'creativity_score': 0,
+                        'logical_score': 0,
+                        'factual_score': 0,
+                        'cost': 0.0
+                    }
+                }
+
+        # Calculate summary
+        if any(not r['text'].startswith('Error:') for r in responses.values()):
+            summary = calculate_summary(responses)
         else:
-            responses[model] = {
-                'text': result['response'],
-                'metrics': {
-                    'time_taken': result['metrics']['time_taken'],
-                    'length': result['metrics']['length'],
-                    'accuracy': result['metrics']['accuracy'],
-                    'creativity_score': result['metrics']['creativity'],
-                    'logical_score': result['metrics']['logical_score'],
-                    'factual_score': result['metrics']['accuracy'],
-                    'cost': result['metrics']['cost']
-                }
+            summary = {
+                'fastest_model': 'N/A',
+                'most_accurate_model': 'N/A',
+                'best_overall_model': 'N/A',
+                'analysis': 'All models returned errors'
             }
 
-    # Generate and save plots
-    plot_dir = os.path.join(app.static_folder, 'images')
-    os.makedirs(plot_dir, exist_ok=True)
-    
-    # Response Times Plot
-    plt.figure(figsize=(10, 6))
-    response_times = [r['metrics']['time_taken'] for r in responses.values()]
-    plt.bar(list(responses.keys()), response_times)
-    plt.title('Response Times by Model')
-    plt.ylabel('Time (seconds)')
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.savefig(os.path.join(plot_dir, 'response_times.png'))
-    plt.close()
+        return jsonify({
+            'responses': responses,
+            'summary': summary,
+            'total_time': time.time() - start_time
+        })
 
-    # Response Lengths Plot
-    plt.figure(figsize=(10, 6))
-    lengths = [r['metrics']['length'] for r in responses.values()]
-    plt.bar(list(responses.keys()), lengths)
-    plt.title('Response Lengths by Model')
-    plt.ylabel('Characters')
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.savefig(os.path.join(plot_dir, 'response_lengths.png'))
-    plt.close()
-
-    # Performance Metrics Plot
-    plt.figure(figsize=(12, 6))
-    metrics = ['accuracy', 'creativity_score', 'logical_score', 'factual_score']
-    models = list(responses.keys())
-    x = np.arange(len(models))
-    width = 0.2
-    
-    # Plot bars for each metric
-    for i, metric in enumerate(metrics):
-        values = [responses[model]['metrics'][metric] for model in models]
-        plt.bar(x + i*width, values, width, label=metric.replace('_', ' ').title())
-    
-    plt.xlabel('Models')
-    plt.ylabel('Score')
-    plt.title('Performance Metrics by Model')
-    plt.xticks(x + width*1.5, models, rotation=45)
-    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-    plt.tight_layout()
-    plt.savefig(os.path.join(plot_dir, 'score_comparison.png'))
-    plt.close()
-
-    # Calculate summary
-    summary = calculate_summary(responses)
-
-    return jsonify({
-        'responses': responses,
-        'summary': summary,
-        'total_time': time.time() - start_time
-    })
+    except Exception as e:
+        print(f"General error in compare_models: {str(e)}")
+        print(f"Traceback: {traceback.format_exc()}")
+        return jsonify({
+            'error': f'An error occurred while comparing models: {str(e)}',
+            'details': traceback.format_exc()
+        }), 500
 
 @app.route('/parameter-test', methods=['POST'])
-def test_parameters():
+def parameter_test():
     try:
         data = request.json
-        prompt = data.get('prompt')
         model = data.get('model')
-        parameters = data.get('parameters', {})
-
-        if not prompt or not model:
-            return jsonify({'error': 'Missing prompt or model'}), 400
-
-        # Test different parameter combinations
-        test_results = []
+        prompt = data.get('prompt')
+        params = data.get('params', {})
         
-        # Temperature variations
-        for temp in [0, 0.3, 0.7, 1.0]:
-            params = {**parameters, 'temperature': temp}
-            result = model_comparison.get_model_response(model, prompt, params)
-            if isinstance(result, dict) and 'response' in result:  # Check for valid response
-                test_results.append({
-                    'parameter': 'temperature',
-                    'value': temp,
-                    **result
-                })
-
-        # Token variations
-        for tokens in [100, 500, 1000, 2000]:
-            params = {**parameters, 'max_tokens': tokens}
-            result = model_comparison.get_model_response(model, prompt, params)
-            if isinstance(result, dict) and 'response' in result:
-                test_results.append({
-                    'parameter': 'max_tokens',
-                    'value': tokens,
-                    **result
-                })
-
-        if not test_results:
-            return jsonify({'error': 'No valid results obtained'}), 500
-
-        # Save results
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        results_file = os.path.join(model_comparison.results_dir, f"parameter_test_{model}_{timestamp}.json")
-        
-        all_results = {
-            'model': model,
-            'prompt': prompt,
-            'timestamp': timestamp,
-            'results': test_results
-        }
-        
-        with open(results_file, 'w') as f:
-            json.dump(all_results, f, indent=2)
-
-        return jsonify(all_results)
+        result = model_comparison.get_model_response(model, prompt, params)
+        return jsonify(result)
         
     except Exception as e:
         print(f"Error in parameter test: {str(e)}")
-        return jsonify({'error': f'Error running parameter test: {str(e)}'}), 500
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/tier-test', methods=['POST'])
 def test_tiers():
@@ -414,6 +379,62 @@ def test_function():
         print(f"General error: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
+@app.route('/test-performance', methods=['POST'])
+def test_performance():
+    try:
+        data = request.json
+        test_type = data.get('test_type')
+        test_performance = TestPerformance(model_comparison)
+
+        if test_type == 'streaming':
+            print(f"Running streaming test with model: {data.get('model', 'openai')}")
+            return Response(
+                test_performance.test_streaming_response(
+                    data.get('prompt', ''), 
+                    data.get('model', 'openai')
+                ),
+                mimetype='text/event-stream'
+            )
+            
+        elif test_type == 'latency':
+            simple_prompt = data.get('simple_prompt')
+            complex_prompt = data.get('complex_prompt')
+            print(f"Running latency test with simple prompt: {simple_prompt}")
+            print(f"Complex prompt: {complex_prompt}")
+            
+            results = test_performance.test_simple_vs_complex_latency(
+                simple_prompt=simple_prompt,
+                complex_prompt=complex_prompt
+            )
+            return jsonify(results)
+            
+        elif test_type == 'batch':
+            batch_size = int(data.get('batch_size', 100))
+            model = data.get('model', 'openai')
+            prompt = data.get('prompt', '')
+            
+            print(f"Running batch test with size: {batch_size} using model: {model}")
+            print(f"Prompt: {prompt}")
+            
+            try:
+                results = test_performance.test_batch_vs_individual(
+                    batch_size=batch_size,
+                    base_prompt=prompt,
+                    model=model
+                )
+                return jsonify(results)
+            except Exception as e:
+                print(f"Error in batch test: {str(e)}")
+                traceback.print_exc()
+                return jsonify({'error': str(e)}), 500
+            
+        return jsonify({'error': 'Invalid test type'}), 400
+        
+    except Exception as e:
+        print(f"Error in test_performance: {str(e)}")
+        traceback.print_exc()
+        return jsonify({'error': str(e)}), 500
+
 def calculate_summary(responses):
     try:
         # Find the best performing models
@@ -470,4 +491,4 @@ def generate_analysis(responses, overall_scores):
         return f"Error generating analysis: {str(e)}"
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True, port=5001) 

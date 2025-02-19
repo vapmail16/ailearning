@@ -1,0 +1,87 @@
+{
+  "model": "openai",
+  "prompt": "tell me a joke",
+  "timestamp": "20250218_232512",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.7381248474121094,
+        "tokens": 13,
+        "cost": 4.2e-05
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.6133460998535156,
+        "tokens": 13,
+        "cost": 4.2e-05
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "Why couldn't the bicycle find its way home? Because it lost its bearings!",
+      "metrics": {
+        "time_taken": 0.6281449794769287,
+        "tokens": 13,
+        "cost": 4.2e-05
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "Why did the scarecrow win an award?\n\nBecause he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.8046867847442627,
+        "tokens": 14,
+        "cost": 4.4e-05
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "Why don't scientists trust atoms? \n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 0.6146891117095947,
+        "tokens": 10,
+        "cost": 3.4e-05
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.7286820411682129,
+        "tokens": 14,
+        "cost": 4.4e-05
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "Why couldn't the bicycle stand up by itself? Because it was two-tired!",
+      "metrics": {
+        "time_taken": 0.7142407894134521,
+        "tokens": 12,
+        "cost": 3.9e-05
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.6845049858093262,
+        "tokens": 14,
+        "cost": 4.4e-05
+      }
+    }
+  ]
+}

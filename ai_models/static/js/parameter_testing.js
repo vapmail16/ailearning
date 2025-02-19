@@ -6,6 +6,12 @@ class ParameterTesting {
         this.promptInput = document.getElementById('prompt-input');
         this.baselineResults = null;
         this.initializeCharts();
+        
+        // Show parameter testing by default
+        const parameterSection = document.getElementById('parameter-test');
+        if (parameterSection) {
+            parameterSection.style.display = 'block';
+        }
     }
 
     setupEventListeners() {
@@ -17,14 +23,14 @@ class ParameterTesting {
         if (testType) {
             testType.addEventListener('change', async (e) => {
                 if (e.target.value === 'parameter') {
-                    parameterOptions.style.display = 'block';
-                    tierOptions.style.display = 'none';
+                    if (parameterOptions) parameterOptions.style.display = 'block';
+                    if (tierOptions) tierOptions.style.display = 'none';
                     if (this.baselineResults) {
                         this.displayParameterMetrics();
                     }
                 } else if (e.target.value === 'tier') {
-                    parameterOptions.style.display = 'none';
-                    tierOptions.style.display = 'block';
+                    if (parameterOptions) parameterOptions.style.display = 'none';
+                    if (tierOptions) tierOptions.style.display = 'block';
                     if (this.baselineResults && this.promptInput.value.trim()) {
                         await this.fetchAndDisplayTierResults('tier_1');
                     }
@@ -46,9 +52,14 @@ class ParameterTesting {
         this.initializeParameterControls();
 
         // Add Run Test button handler
-        const runTestBtn = document.getElementById('run-test-btn');
+        const runTestBtn = document.getElementById('run-parameter-test');
         if (runTestBtn) {
-            runTestBtn.addEventListener('click', () => this.runParameterTest());
+            runTestBtn.addEventListener('click', () => {
+                console.log("Running parameter test");
+                this.runParameterTest();
+            });
+        } else {
+            console.error("Could not find run parameter test button");
         }
     }
 
@@ -248,31 +259,25 @@ class ParameterTesting {
     }
 
     async runParameterTest() {
-        if (!this.promptInput.value.trim()) {
-            alert('Please enter a prompt first');
+        const promptValue = this.promptInput.value.trim();
+        if (!promptValue) {
+            alert('Please enter a prompt in the main input field first');
             return;
         }
 
-        const selectedModel = document.getElementById('model-select').value;
+        const selectedModel = document.getElementById('parameter-model').value;
         const parameters = {
             temperature: parseFloat(document.getElementById('temperature').value),
             max_tokens: parseInt(document.getElementById('max-tokens').value),
             top_p: parseFloat(document.getElementById('top-p').value)
         };
 
-        const runTestBtn = document.getElementById('run-test-btn');
+        const runTestBtn = document.getElementById('run-parameter-test');
         const parameterLoading = document.querySelector('.parameter-loading');
         
         try {
-            runTestBtn.disabled = true;
-            parameterLoading.style.display = 'block';
-
-            // Create an array of parameter tests to run
-            const parameterTests = [
-                { parameter: 'temperature', value: parameters.temperature },
-                { parameter: 'max_tokens', value: parameters.max_tokens },
-                { parameter: 'top_p', value: parameters.top_p }
-            ];
+            if (runTestBtn) runTestBtn.disabled = true;
+            if (parameterLoading) parameterLoading.style.display = 'block';
 
             const response = await fetch('/parameter-test', {
                 method: 'POST',
@@ -280,10 +285,9 @@ class ParameterTesting {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    prompt: this.promptInput.value.trim(),
+                    prompt: promptValue,
                     model: selectedModel,
-                    parameters: parameters,
-                    parameterTests: parameterTests  // Add this to ensure all parameters are tested
+                    parameters: parameters
                 })
             });
 
@@ -292,62 +296,14 @@ class ParameterTesting {
             }
 
             const data = await response.json();
-            if (data.error) {
-                throw new Error(data.error);
-            }
-
-            // Update the results table with the new test results
-            const tbody = document.getElementById('results-body');
-            const baselineMetrics = this.baselineResults.responses[selectedModel].metrics;
-            
-            let rows = '';
-            
-            // Baseline row
-            rows += `
-                <tr class="baseline-row">
-                    <td>${selectedModel}</td>
-                    <td>Baseline</td>
-                    <td>Default</td>
-                    <td>${this.truncateText(this.baselineResults.responses[selectedModel].text, 100)}</td>
-                    <td>${baselineMetrics.time_taken.toFixed(2)}s</td>
-                    <td>${(baselineMetrics.accuracy * 100).toFixed(1)}%</td>
-                    <td>${(baselineMetrics.creativity_score * 100).toFixed(1)}%</td>
-                    <td>${(baselineMetrics.logical_score * 100).toFixed(1)}%</td>
-                    <td>$${baselineMetrics.cost.toFixed(4)}</td>
-                    <td>-</td>
-                </tr>
-            `;
-
-            // Add test result rows
-            data.results.forEach(result => {
-                const changes = this.calculateChanges(result.metrics, baselineMetrics);
-                rows += `
-                    <tr>
-                        <td>${selectedModel}</td>
-                        <td>${result.parameter}</td>
-                        <td>${result.value}</td>
-                        <td>${this.truncateText(result.response, 100)}</td>
-                        <td>${result.metrics.time_taken.toFixed(2)}s</td>
-                        <td>${(result.metrics.accuracy * 100).toFixed(1)}%</td>
-                        <td>${(result.metrics.creativity_score * 100).toFixed(1)}%</td>
-                        <td>${(result.metrics.logical_score * 100).toFixed(1)}%</td>
-                        <td>$${result.metrics.cost.toFixed(4)}</td>
-                        <td>${this.formatChanges(changes)}</td>
-                    </tr>
-                `;
-            });
-
-            tbody.innerHTML = rows;
-
-            // Update the parameter impact summary
-            this.updateParameterSummary(data, parameters);
+            this.displayParameterResults(data);
 
         } catch (error) {
             console.error('Error:', error);
-            alert(`Error running parameter test: ${error.message}`);
+            alert('Error running parameter test: ' + error.message);
         } finally {
-            runTestBtn.disabled = false;
-            parameterLoading.style.display = 'none';
+            if (runTestBtn) runTestBtn.disabled = false;
+            if (parameterLoading) parameterLoading.style.display = 'none';
         }
     }
 

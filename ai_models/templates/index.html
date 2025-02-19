@@ -9,6 +9,7 @@
     <script src="/static/js/main.js" defer></script>
     <script src="/static/js/parameter_testing.js" defer></script>
     <script src="/static/js/function_testing.js" defer></script>
+    <script src="/static/js/performance_testing.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -41,78 +42,40 @@
                 </select>
             </div>
 
-            <!-- Three separate sections for each test type -->
-            <div id="parameter-options" class="test-section">
-                <!-- Add model selection dropdown -->
+            <!-- Parameter Testing Section -->
+            <div id="parameter-test" class="test-section">
+                <h3>Parameter Testing</h3>
                 <div class="control-group">
-                    <label for="model-select">Select Model:</label>
-                    <select id="model-select">
+                    <label for="parameter-model">Select Model:</label>
+                    <select id="parameter-model">
                         <option value="openai">OpenAI</option>
                         <option value="anthropic">Anthropic</option>
                         <option value="together">Together</option>
                         <option value="gemini">Gemini</option>
                     </select>
                 </div>
-
+                
                 <div class="parameter-controls">
                     <div class="control-group">
-                        <label>Temperature: <span id="temp-value">1.0</span></label>
-                        <input type="range" id="temperature" min="0" max="2" step="0.1" value="1.0">
-                    </div>
-                    <div class="control-group">
-                        <label>Max Tokens: <span id="tokens-value">2000</span></label>
-                        <input type="range" id="max-tokens" min="100" max="4000" step="100" value="2000">
-                    </div>
-                    <div class="control-group">
-                        <label>Top P: <span id="top-p-value">1.0</span></label>
-                        <input type="range" id="top-p" min="0" max="1" step="0.1" value="1.0">
+                        <label for="temperature">Temperature:</label>
+                        <input type="range" id="temperature" min="0" max="1" step="0.1" value="0.7">
+                        <span class="parameter-value">0.7</span>
                     </div>
                     
                     <div class="control-group">
-                        <button id="run-test-btn" class="primary-button">Run Parameter Test</button>
+                        <label for="max-tokens">Max Tokens:</label>
+                        <input type="range" id="max-tokens" min="100" max="2000" step="100" value="1000">
+                        <span class="parameter-value">1000</span>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="top-p">Top P:</label>
+                        <input type="range" id="top-p" min="0" max="1" step="0.1" value="1.0">
+                        <span class="parameter-value">1.0</span>
                     </div>
                 </div>
-
-                <div class="test-results">
-                    <table class="results-table">
-                        <thead>
-                            <tr>
-                                <th>Model</th>
-                                <th>Parameter</th>
-                                <th>Value</th>
-                                <th>Response</th>
-                                <th>Time (s)</th>
-                                <th>Accuracy</th>
-                                <th>Creativity</th>
-                                <th>Logical Score</th>
-                                <th>Cost ($)</th>
-                                <th>Change (%)</th>
-                            </tr>
-                        </thead>
-                        <tbody id="results-body">
-                            <!-- Results will be populated here -->
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Parameter Impact Summary (moved below) -->
-                <div class="parameter-summary">
-                    <h3>Parameter Impact Analysis</h3>
-                    <div class="summary-grid">
-                        <div id="temperature-summary" class="impact-card">
-                            <h4>Temperature Impact</h4>
-                            <!-- Will be populated dynamically -->
-                        </div>
-                        <div id="tokens-summary" class="impact-card">
-                            <h4>Token Length Impact</h4>
-                            <!-- Will be populated dynamically -->
-                        </div>
-                        <div id="cost-summary" class="impact-card">
-                            <h4>Cost-Performance Analysis</h4>
-                            <!-- Will be populated dynamically -->
-                        </div>
-                    </div>
-                </div>
+                
+                <button id="run-parameter-test" class="primary-button">Run Parameter Test</button>
             </div>
 
             <div id="tier-options" class="test-section" style="display: none;">
@@ -285,6 +248,101 @@
         <div class="parameter-loading" style="display: none;">
             <div class="spinner"></div>
             <p>Running parameter tests...</p>
+        </div>
+
+        <!-- After the existing Model Responses section -->
+
+        <div class="performance-testing-section">
+            <h2>Performance Testing</h2>
+            
+            <!-- Test Type Selection -->
+            <div class="control-group">
+                <label for="performance-test-type">Select Test Type:</label>
+                <select id="performance-test-type">
+                    <option value="batch">Batch Processing Test</option>
+                    <option value="streaming">Streaming Response Test</option>
+                    <option value="simple-vs-complex">Simple vs Complex Queries</option>
+                </select>
+            </div>
+
+            <!-- Test Sections (all initially hidden except batch) -->
+            <div id="batch-test" class="test-section">
+                <h3>Batch Processing Test</h3>
+                <div class="control-group">
+                    <label for="batch-model">Select Model:</label>
+                    <select id="batch-model">
+                        <option value="openai">OpenAI (GPT-3.5)</option>
+                        <option value="anthropic">Anthropic (Claude-3)</option>
+                        <option value="together">Together (Mixtral)</option>
+                        <option value="gemini">Google (Gemini)</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="batch-prompt">Base Prompt:</label>
+                    <textarea id="batch-prompt" rows="3" placeholder="Enter the base prompt for batch processing"></textarea>
+                    <small class="help-text">This prompt will be used for all requests</small>
+                </div>
+                <div class="control-group">
+                    <label for="batch-size">Number of Requests:</label>
+                    <input type="number" id="batch-size" value="10" min="1" max="100">
+                    <small class="help-text">Choose between 1-100 requests</small>
+                </div>
+                <button id="run-batch-test" class="primary-button">Run Batch Test</button>
+                
+                <!-- Add loading indicator -->
+                <div id="batch-loading" class="loading-indicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Processing batch requests... This may take a few minutes.</p>
+                    <div id="batch-progress" class="progress-text"></div>
+                </div>
+                
+                <div id="results-content"></div>
+            </div>
+
+            <div id="streaming-test" class="test-section" style="display: none;">
+                <h3>Streaming Response Test</h3>
+                <div class="control-group">
+                    <label for="streaming-prompt">Enter Prompt:</label>
+                    <textarea id="streaming-prompt" rows="3" placeholder="Enter a prompt to test streaming"></textarea>
+                </div>
+                <div class="control-group">
+                    <label for="streaming-model">Select Model:</label>
+                    <select id="streaming-model">
+                        <option value="openai">OpenAI</option>
+                        <option value="anthropic">Anthropic</option>
+                    </select>
+                </div>
+                <button id="run-streaming-test" class="primary-button">Test Streaming</button>
+                <div id="streaming-output" class="response-box"></div>
+            </div>
+
+            <div id="simple-vs-complex-test" class="test-section" style="display: none;">
+                <h3>Simple vs Complex Query Test</h3>
+                <div class="control-group">
+                    <label>Simple Query:</label>
+                    <textarea id="simple-query" rows="2" placeholder="Enter a simple query (e.g., What is 2+2?)"></textarea>
+                </div>
+                <div class="control-group">
+                    <label>Complex Query:</label>
+                    <textarea id="complex-query" rows="3" 
+                              placeholder="Enter a complex query (e.g., Explain quantum computing and its implications for cryptography)"></textarea>
+                </div>
+                <button id="run-latency-test" class="primary-button">Run Latency Test</button>
+                
+                <!-- Add loading indicator for latency test -->
+                <div id="latency-loading" class="loading-indicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Running latency tests... This may take a few minutes.</p>
+                </div>
+                
+                <div id="results-content"></div>
+            </div>
+
+            <!-- Results Display -->
+            <div id="performance-results" class="results-section">
+                <h3>Test Results</h3>
+                <div id="results-content"></div>
+            </div>
         </div>
     </div>
 </body>

@@ -1,0 +1,87 @@
+{
+  "model": "openai",
+  "prompt": "tell me a joke",
+  "timestamp": "20250218_233037",
+  "results": [
+    {
+      "parameter": "temperature",
+      "value": 0,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.8931369781494141,
+        "tokens": 13,
+        "cost": 4.2e-05
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.3,
+      "response": "Why couldn't the bicycle stand up by itself? Because it was two tired!",
+      "metrics": {
+        "time_taken": 0.646533727645874,
+        "tokens": 13,
+        "cost": 4.2e-05
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 0.7,
+      "response": "Why couldn't the bicycle stand up by itself? Because it was two-tired!",
+      "metrics": {
+        "time_taken": 0.6363999843597412,
+        "tokens": 12,
+        "cost": 3.9e-05
+      }
+    },
+    {
+      "parameter": "temperature",
+      "value": 1.0,
+      "response": "Why did the scarecrow win an award?\nBecause he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.7282359600067139,
+        "tokens": 14,
+        "cost": 4.4e-05
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 100,
+      "response": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+      "metrics": {
+        "time_taken": 0.6614720821380615,
+        "tokens": 10,
+        "cost": 3.4e-05
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 500,
+      "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "metrics": {
+        "time_taken": 0.7310760021209717,
+        "tokens": 14,
+        "cost": 4.4e-05
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 1000,
+      "response": "Sure, here's a joke for you:\n\nWhy couldn't the bicycle find its way home?\n\nBecause it lost its bearings!",
+      "metrics": {
+        "time_taken": 0.7901139259338379,
+        "tokens": 19,
+        "cost": 5.7e-05
+      }
+    },
+    {
+      "parameter": "max_tokens",
+      "value": 2000,
+      "response": "Why couldn't the bicycle stand up by itself?\n\nBecause it was two tired!",
+      "metrics": {
+        "time_taken": 0.6436300277709961,
+        "tokens": 13,
+        "cost": 4.2e-05
+      }
+    }
+  ]
+}

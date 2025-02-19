@@ -131,4 +131,26 @@ class ModelComparison {
 // Initialize after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.modelComparison = new ModelComparison();
+
+    // Test type switching
+    const testTypeSelect = document.getElementById('test-type');
+    const testSections = document.querySelectorAll('.test-section');
+    
+    function showTestSection(testType) {
+        testSections.forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        const selectedSection = document.getElementById(`${testType}-test`);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        }
+    }
+    
+    // Show parameter testing by default
+    showTestSection('parameter');
+    
+    testTypeSelect.addEventListener('change', (e) => {
+        showTestSection(e.target.value);
+    });
 }); 
